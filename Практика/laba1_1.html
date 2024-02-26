@@ -1,0 +1,701 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/HTML4/loose.dtd">
+<html>
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>Лабораторная работа №1</title>
+
+ <link rel="stylesheet" type="text/css" href="../Оболочка/msu.css">
+
+ <script type="text/javascript" src="../Оболочка/Components.js"></script>
+ <script src="../Оболочка/highlight.pack.js"></script>
+ <script type="text/javascript">hljs.initHighlightingOnLoad('avrasm');</script>
+</head>
+
+<body bgcolor=#E6E6E6 topmargin=1 leftmargin=1 marginwidth=0 marginheight=0 style="max-width: 1300px;">
+<div class=max>
+<a name="top"></a>
+  <table border=0 width=100% cellspacing=0 cellpadding=0>
+    <tr>
+      <td width="190" height="91" name="link19"><a href="../index.html"><img src="../Оболочка/images/bg01.gif" alt=""></a></td>
+      <td rowspan="2" background=../Оболочка/images/bg02.gif height="120" valign="bottom">
+        <table background=../Оболочка/images/raspor.gif border=0 cellspacing=0 cellpadding=0>
+          <tr> <td width=180></td> <td valign="top" height="75"><p class=h6>Лабораторная работа №1</p></td> </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td background=../Оболочка/images/bg03.gif>
+        <a href=../Программа/index.html onMouseOver="mOver(1)" onMouseOut="mOut(1)">
+		  <img src=../Оболочка/images/01a.gif border=0 width=190 height=29 alt="Рабочая программа" name="link1"></a><br>
+      </td>
+    </tr>
+    <tr>
+      <td background=../Оболочка/images/bg03.gif>
+        <a href=../Теория/micro.html onMouseOver="mOver(2)" onMouseOut="mOut(2)">
+		  <img src=../Оболочка/images/02a.gif width=190 height=29 border=0 alt="Теоретическая часть" name="link2"></a><br>
+      </td>
+    </tr>
+    <tr>
+      <td background=../Оболочка/images/bg09.gif valign=Top>
+        <table border=0 cellspacing=0 cellpadding=0>
+            <tr>
+                <td background=../Оболочка/images/bg04.gif width=190 valign=Top>
+                    <img src=../Оболочка/images/03p.gif border=0 width=190 height=29 alt="Практика. Часть 1"><br>
+                </td>
+            <tr>
+                <td background=../Оболочка/images/bg05.gif width=190 valign=Top>
+                    <a href="part_1.html" onMouseOver="mOver(31)" onMouseOut="mOut(31)"><img src=../Оболочка/images/03a_1.gif width=170 height=22 border=0 alt="Отладочная платформа" name="link31"></a></td>
+            </tr>
+            <tr>
+              <td background=../Оболочка/images/bg06.gif width=190 height=38 valign=Top>
+                <img src=../Оболочка/images/03p_2.gif width=170 height=22 border=0 alt="Лабораторная работа 1"><br>
+                <a href="laba1_2.html" onMouseOver="mOver(33)" onMouseOut="mOut(33)"><img src=../Оболочка/images/03a_3.gif width=170 height=20 border=0 alt="Лабораторная работа 2" name="link33"></a><br>
+                <a href="laba1_3.html" onMouseOver="mOver(34)" onMouseOut="mOut(34)"><img src=../Оболочка/images/03a_4.gif width=170 height=36 border=0 alt="Лабораторная работа 3" name="link34"></a><br>
+                <a href="laba1_4.html" onMouseOver="mOver(35)" onMouseOut="mOut(35)"><img src=../Оболочка/images/03a_5.gif width=170 height=36 border=0 alt="Лабораторная работа 4" name="link35"></a><br>
+                <a href="laba1_5.html" onMouseOver="mOver(36)" onMouseOut="mOut(36)"><img src=../Оболочка/images/03a_6.gif width=170 height=32 border=0 alt="Лабораторная работа 5" name="link36"></a><br>
+                <a href="app.html" onMouseOver="mOver(37)" onMouseOut="mOut(37)"><img src=../Оболочка/images/03a_7.gif width=170 height=20 border=0 alt="Приложение" name="link37"></a><br>
+                  <img src=../Оболочка/images/bg07.gif width=190 height=23><br>
+              </td>
+            </tr>
+            <tr>
+              <td background=../Оболочка/images/bg03.gif valign=Top>
+                <a href="part_2.html" onMouseOver="mOver(4)" onMouseOut="mOut(4)"><img src=../Оболочка/images/04a.gif width=190 height=29 border=0 alt="Практическая часть 2" name="link4"></a><br>
+                <a href=../Заочное/index.html onMouseOver="mOver(5)" onMouseOut="mOut(5)"><img src=../Оболочка/images/05a.gif width=190 height=29 border=0 alt="Заочное" name="link5"></a><br>
+                <a href=../Контроль_знаний/index.html onMouseOver="mOver(6)" onMouseOut="mOut(6)"><img src=../Оболочка/images/06a.gif width=190 height=29 border=0 alt="Контроль знаний" name="link6"></a><br>
+                <img src=../Оболочка/images/bg08.gif width=190 height=13><br>
+
+        </table>
+        </td>
+        <td valign=top><br>
+
+        <table border=0 cellpadding=0 cellspacing=0 width=100%>
+          <tr>
+            <td>
+
+
+<table border=0 cellpadding=0 cellspacing=0>
+  <tr><td bgcolor=#000000><img src="../Оболочка/images/raspor.gif" height=2></td>
+  <tr><td valign=Center height="30"><span class=h1>Алгоритмы арифметической обработки данных</span></td></tr>
+  <tr><td bgcolor=#000000><img src="../Оболочка/images/raspor.gif" height=2></td></tr>
+</table><br>
+
+<ul>
+  <dt><a class=m href="#tit1">Краткие теоретические сведения</a></dt>
+  <dt><a class=m href="#tit2">Задание на лабораторную работу</a></dt>
+  <ul>
+    <dt><a class=m href="#tit3_1">Пример решения задачи 1.1</a></dt>
+    <dt><a class=m href="#tit3_2">Пример решения задачи 1.2</a></dt>
+    <dt><a class=m href="#tit3_3">Пример решения задачи 1.3</a></dt>
+    <dt><a class=m href="#tit3_4">Пример решения задачи 1.4</a></dt>
+    <dt><a class=m href="#tit3_5">Пример решения задачи 1.5</a></dt>
+  </ul>
+</ul>
+<hr width="90%" Color="#7685C6" Align="Right">
+<Br>
+
+<p class=h3>Цель работы:</p>
+
+<p>изучить основные приёмы, используемые при программировании арифметических операций над двоичными и двоично-десятичными числами.</p><br>
+
+
+
+
+<a name="tit1"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Краткие теоретические сведения</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table>
+<br>
+
+<p>Для выполнения арифметических операций в микроконтроллере ATmega предусмотрены следующие команды:</p>
+
+<ul type=Disk>
+  <li><b>ADD</b> - сложение двух РОН, результат сохраняется в первом операнде;</li>
+  <li><b>ADC</b> - сложение двух РОН с учётом переноса (к результату добавляется значение флага C регистра SREG);</li>
+  <li><b>ADIW</b> – сложение регистровой пары с константой;</li>
+  <li><b>SUB</b> – вычитание двух РОН, результат сохраняется в первом операнде;</li>
+  <li><b>SUBI</b> – вычитание константы из РОН;</li>
+  <li><b>SBC</b> – вычитание двух РОН с заёмом (от результата отнимается значения флага C регистра SREG);</li>
+  <li><b>SBCI</b> – вычитание константы из РОН с заёмом;</li>
+  <li><b>SBIW</b> – вычитание константы из регистровой пары;</li>
+  <li><b>DEC</b> – декремент РОН;</li>
+  <li><b>INC</b> – инкремент РОН;</li>
+</ul>
+
+<p>Эти команды выполняют арифметическую операцию между двумя операндами, результат формируется в первом операнде.
+Команды <code style="color: #005599"><b>add</b></code>, <code style="color: #005599"><b>adc</b></code>,
+<code style="color: #005599"><b>sub</b></code>, <code style="color: #005599"><b>subi</b></code>, <code style="color: #005599"><b>sbc</b></code>,
+<code style="color: #005599"><b>sbci</b></code> – модифицируют значение флагов Z, C, N, V, H. <code style="color: #005599"><b>adiw</b></code> и
+<code style="color: #005599"><b>sbiw</b></code> изменяют значения флагов Z, C, N, V, S. <code style="color: #005599"><b>dec</b></code> и
+<code style="color: #005599"><b>inc</b></code> – Z, N, V.</p>
+
+<p>Арифметические операции выполняются над 8-разрядными двоичными числами. Однако программист может интерпретировать операнды и результат операций
+различными способами:</p>
+
+<ol>
+  <li>как восьмиразрядное двоичное число без знака (0...255<sub>10</sub>);</li>
+  <li>как семиразрядное двоичное число со знаком (-127<sub>10</sub>...+127<sub>10</sub>);</li>
+  <li>как двухразрядное десятичное число без знака (0...99<sub>10</sub>);</li>
+  <li>как двухразрядное десятичное число со знаком (-49<sub>10</sub>...+49<sub>10</sub>);</li>
+</ol>
+
+<p>Например, двоичное число 10001000 можно интерпретировать как 136<sub>10</sub>, -120<sub>10</sub>, 88<sub>16</sub>, -12<sub>16</sub>. При этом для
+представления отрицательных чисел используется дополнительный код, вычисляемый по формуле:</p>
+
+<p><em><center>ДопКод = FF - a + 1,</center></em></p>
+
+<p>где <em>а</em> – основание системы счисления.</p>
+
+<p>Конкретный способ интерпретации определяется программистом и зависит от назначения программы.</Br>
+При написании программ следует учитывать, что команды сложения и вычитания осуществляют обработку данных по законам двоичной арифметики. Поэтому
+арифметические операции над двоично-десятичными числами выполняются за несколько шагов.</p>
+
+<p>При сложении:</p>
+
+а) двоичное сложение <code style="color: #005599"><b>add</b></code>;</Br>
+б) десятичная коррекция.
+
+<p>При вычитании:</p>
+
+а) формирование дополнительного кода вычитаемого (99<sub>10</sub> – <i>ПрКод</i>+1);</Br>
+б) десятичная коррекция;</Br>
+в) двоичное сложение <code style="color: #005599"><b>add</b></code>;</Br>
+г) десятичная коррекция.
+
+<p>Десятичная коррекция выполняется над каждой тетрадой числа следующим образом:</p>
+
+<ol>
+  <li>если после сложения значение младшей тетрады больше 9 или установился флаг H, то к результату прибавляется 6;</li>
+  <li>если после сложения значение старшей тетрады больше 9 или установился флаг C, то к старшей тетраде прибавляется 6.</li>
+</ol>
+
+<p>Например:</p>
+
+<table border=0>
+  <tr> <td valign="Middle" rowspan="2">ADD</td> <td>38H</td> </tr>
+  <tr> <td style='border-bottom:solid  #000000  1.0pt; padding-top: 4px'>54H</td> </tr>
+  <tr> <td valign="Middle" rowspan="2">&nbsp;&nbsp;+</td> <td>8CH</td> </tr>
+  <tr> <td style='border-bottom:solid  #000000  1.0pt; padding-top: 4px'>&nbsp;&nbsp;6</td> </tr>
+  <tr> <td>&nbsp;</td> <td>92D</td> </tr>
+</table>
+
+
+<p>Сложение и вычитание чисел большой длины (16, 24 и более разрядов) выполняются побайтно. При этом сначала обрабатываются младшие байты операндов,
+а затем последующие (с учётом переноса от предыдущей операции).</p>
+
+<p>В микроконтроллерах ATmega имеется команда умножения <code style="color: #005599"><b>mul</b></code> 8-разрядных операндов, которая формирует
+16-разрядный результат в регистровой паре R0-R1. Однако отсутствуют команды деления и обработки чисел с плавающей запятой. Эти операции выполняются
+программно – путём соответствующих комбинаций команд сложения, вычитания и сдвига.</p>
+
+<p>При обработке данных используются также команды пересылок:</p>
+
+<ul type=Disk>
+  <li><b>MOV</b> - пересылка данных между РОН;</li>
+  <li><b>MOVW</b> - пересылка данных между регистровыми парами;</li>
+  <li><b>STS</b> – непосредственная запись в ОЗУ, первый операнд – адрес ОЗУ, второй – РОН;</li>
+  <li><b>LDS</b> – непосредственное чтение из ОЗУ, первый операнд – РОН, второй – адрес ОЗУ;</li>
+  <li><b>LDI</b> – загрузка константы в РОН, первый операнд – РОН, второй – константа;</li>
+  <li>а также команды пересылок с косвенной адресацией. Команды пересылок содержимое регистра флагов не изменяют.</li>
+</ul>
+
+<p>Команды сравнения можно использовать для модификации флагов S, Z, C, N, V, H перед командами условного перехода. При этом вычисляется разность
+содержимого операндов, модифицируются флаги, но результат не сохраняется. Список изменяемых флагов можно найти в справочнике команд в
+<a href="./app.html#tit4">приложении</a>.</p>
+
+<ul type=Disk>
+  <li><b>CP</b> - сравнение содержимого двух РОН. Фактически производится вычитание без сохранения результата;</li>
+  <li><b>CPC</b> - сравнение содержимого двух РОН с учётом флага переноса C. Удобна для сравнения нескольких байтов;</li>
+  <li><b>CPI</b> – сравнение содержимого РОН с константой;</li>
+  <li><b>CPSE</b> – сравнение двух РОН, с пропуском следующей команды при равенстве их содержимых.</li>
+</ul>
+
+<p>Также существует группа команд условного и безусловного перехода.</p>
+
+<ul type=Disk>
+  <li><b>JMP</b> - безусловный переход по указанному адресу;</li>
+  <li>другие.</li>
+</ul>
+
+<p>Команды условного перехода осуществляют проверку флагов регистра состояния SREG и осуществляют переход к указанному адресу:</p>
+
+<ul type=Disk>
+  <li><b>BRCC</b>/<b>BRCS</b> - переход по переносу (C = 0 / 1);</li>
+  <li><b>BRNE</b>/<b>BREQ</b> - переход по нулевому результату (Z = 0 / 1);</li>
+  <li><b>BRGE</b>/<b>BRLT</b> - переход по «больше или равно» (со знаком) N &oplus; V (S = 0 / 1);</li>
+  <li><b>BRPL</b>/<b>BRMI</b> - переход по условию «отрицательное значение» (N = 0 / 1);</li>
+  <li><b>BRHC</b>/<b>BRHS</b> - переход по половинному переносу (H = 0 / 1);</li>
+  <li><b>BRVC</b>/<b>BRVS</b> - переход по переполнению дополнительного кода (V = 0 / 1).</li>
+</ul>
+
+<p>Далее за командой перехода следует имя метки, обозначающей начало подпрограммы:</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>main: ldi r16, 0x00
+      ldi r17, 0x01
+      ldi r18, 0x02
+      mov r17, r16
+      rjmp main</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Из кода видно, что перед тем как начать выполнение циклической программы сначала, в цикле выполняются 4 команды. Следовательно, переход на метку
+main в данном случае означает возврат счётчика команд PC на 4 значения назад.</p>
+
+<p>Если включить опцию Disassembly во время отладки, то это можно увидеть явно:</p>
+
+<img src="images/lr1_1_disassembly.png">
+<br><br><br><br>
+
+
+ 
+ 
+<a name="tit2"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src= "../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Задания на лабораторную работу</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table>
+<br>
+
+<p><b>ЗАДАЧА 1.1.</b> Написать программу сложения (вычитания) двух 8-разрядных двоичных чисел, одно из которых содержится в регистре R, а второе – в
+ячейке памяти данных с адресом 0x02**. Результат поместить в память данных по адресу 0x03**.</p>
+
+<p>Программы проверить на примерах: 1) 88<sub>16</sub> +(-) ** ; 2) 00 +(-) ** ; 3) FF +(-) **. Исходные операнды задаются на этапе выполнения
+программы в режиме отладки.</p>
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+<p><b>ЗАДАЧА 1.2.</b> Написать программу сложения (вычитания) двух 16-разрядных двоичных чисел, одно из которых содержится в регистрах R, R1, а
+второе – в ячейках памяти данных с адресами 0x02**, 0x02** + 1. Результат поместить в ячейки памяти данных с адресами 0x03**, 0x03** + 1. Исходные
+операнды задаются на этапе выполнения программы в режиме отладки.</p>
+
+<p>Программы проверить на примерах: 1) 8888<sub>16</sub> +(-) **АВ; 2) 0000 +(-) АВ**; 3) FFFF +(-) А**В.</p>
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+<p><b>ЗАДАЧА 1.3.</b> Написать программу умножения 16-разрядного операнда, находящегося в ячейках памяти данных с адресами 0x02**, 0x02** + 1 на
+8-разрядный операнд **, находящийся в регистре R. Результат разместить в памяти данных, начиная с адреса 0x03**.</p>
+
+<p>Программы проверить на примерах: 1) 0002 • **; 2) 0010<sub>16</sub> • **; 3) 0100<sub>16</sub> • **; 4) А**В • **.</p>
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+<p><b>ЗАДАЧА 1.4.</b> Написать программу деления операнда **, находящийся в регистре R на 8-разрядный операнд, находящийся в ячейке памяти данных с
+адресом 0x02**. Сохранить частное в ячейке памяти данных с адресом 0x03**, а остаток – в ячейке 0x03** + 1. Написать коментарии, поясняющие принцип
+работы алгоритма. Время выполнения программы не должно зависеть от входных данных.</p>
+
+<p>Программу проверить на примерах: 1) ** : 02; 2) ** : 10<sub>16</sub>; 3) ** : 0F<sub>16</sub>.</p>
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+<p><b>ЗАДАЧА 1.5.</b> Написать программу сложения (вычитания) двухразрядных двоично-десятичных чисел, одно из которых содержится в регистре R, а
+второе – в ячейке памяти данных с адресом 0x02**.</p>
+
+<p>Программы проверить на примерах: 1) 49<sub>2/10</sub> +(-) **<sub>2/10</sub>; 2) 00<sub>2/10</sub> +(-) **<sub>2/10</sub>; 3) 99<sub>2/10</sub>
+ +(-) **<sub>2/10</sub>.</p><br>
+
+<table border=0 cellpadding=0 cellspacing=0 width=95%>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#800000></td></tr>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#FF0000></td></tr>
+  <tr>
+    <td valign=ToP><p class=pr>Примечание:&nbsp;&nbsp;</p></td>
+    <td valign=Center><p class=prt>Номера регистров R и R1 назначаются преподавателем, число ** соответствует номеру варианта.</p></td>
+  </tr>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#800000></td></tr>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#FF0000></td></tr>
+</table>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_1"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 1.1.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Составим программы сложения (вычитания) двух 8-разрядных двоичных чисел, одно из которых программно помещается в регистр R16, а второе находится
+в ячейке памяти данных с адресом 0x0200.<br>
+Для операции сложения программа состоит из следующих команд:</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+      ldi r16,0x25   ;в r16 помещается первый операнд
+      lds r18,0x0200 ;в r18 помещается второй операнд
+      add r18,r16    ;сложение r18=r18+r16
+      sts 0x0300,r18 ;сохранение результата
+end:  rjmp end       ;остановка программы</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Для операции вычитания программа имеет вид:</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+      ldi r16,0x25   ;в r16 помещается заданный операнд
+      lds r18,0x0200 ;в r18 помещается второй операнд
+      sub r18,r16    ;вычитание r18=r18-r16
+      sts 0x0300,r18 ;сохранение результата
+end:  rjmp end       ;остановка программы</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Результаты выполнения тестовых примеров представим в виде таблицы:</p>
+
+<center><table border="1" cellpadding="7" cellspacing="1" width="600">
+  <tr bgcolor="#D1D6E9">
+    <td valign="Middle" rowspan="2"><p class=tcb>1-й операнд</p></td>
+    <td valign="Middle" rowspan="2"><p class=tcb>2-й операнд</p></td>
+    <td valign="Middle" ColSpan="6"><p class=tcb>Сложение</p></td>
+    <td valign="Middle" ColSpan="6"><p class=tcb>Вычитание</p></td>
+  </tr>
+  <tr>
+    <td><p class=tcb>Сумма</p></td>
+    <td><p class=tcb>С</p></td>
+    <td><p class=tcb>N</p></td>
+    <td><p class=tcb>V</p></td>
+    <td><p class=tcb>S</p></td>
+    <td><p class=tcb>Z</p></td>
+    <td><p class=tcb>Разность</p></td>
+    <td><p class=tcb>С</p></td>
+    <td><p class=tcb>N</p></td>
+    <td><p class=tcb>V</p></td>
+    <td><p class=tcb>S</p></td>
+    <td><p class=tcb>Z</p></td>
+  </tr>
+  <tr bgcolor=#DCDCDC>
+    <td><p class=tc>88</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>AD</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>63</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+  </tr>
+  <tr bgcolor=#EAEAEA>
+    <td><p class=tc>00</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>DB</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+  </tr>
+  <tr bgcolor=#DCDCDC>
+    <td><p class=tc>FF</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>24</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>DA</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+    <td><p class=tc>1</p></td>
+    <td><p class=tc>0</p></td>
+  </tr>
+  </table></center><br>
+
+<p>Анализ полученных результатов при различных способах интерпретации показывает, что о корректности результата можно судить по значению флага
+переноса и по знакам операндов.</p>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_2"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 1.2.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Составим программы сложения (вычитания) 16-разрядных двоичных чисел, одно из которых программно помещается в регистры R20, R21, а второе находится
+в ячейках памяти данных с адресами 0x0200, 0x0201. Операция сложения таких чисел выполняется в два этапа – сначала складываются младшие байты, а
+затем старшие (с учётом переноса).<br>
+Соответствующая программа имеет вид:</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+      ldi r21,0x88
+      ldi r20,0x88
+      lds r19,0x0200
+      lds r18,0x0201
+      add r21,r18    ;сложение r21 = r21 + r18
+      adc r20,r19    ;сложение с переносом r20 = r20 + r19 + FlagC
+end:  rjmp end       ;остановка программы</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Аналогично выполняется и операция вычитания – сначала обрабатываются младшие байты, а затем – старшие (с учётом заёма):</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+      ldi r21,0x88
+      ldi r20,0x88
+      lds r19,0x0200
+      lds r18,0x0201
+      sub r21,r18    ;вычитание r21 = r21 - r18
+      sbc r20,r19    ;вычитание с заёмом r20 = r20 - r19 - FlagC
+end:  rjmp end       ;остановка программы</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Результаты выполнения тестовых примеров представим в виде таблицы:</p>
+
+<center>
+  <table border="1" cellpadding="7" cellspacing="1" width="600">
+    <tr bgcolor="#D1D6E9">
+      <td valign="Middle" rowspan="2"><p class=tcb>1-й операнд</p></td> <td valign="Middle" rowspan="2"><p class=tcb>2-й операнд</p></td>
+      <td valign="Middle" ColSpan="6"><p class=tcb>Сложение</p></td> <td valign="Middle" ColSpan="6"><p class=tcb>Вычитание</p></td>
+    </tr>
+    <tr>
+      <td><p class=tcb>Сумма</p></td> <td><p class=tcb>С</p></td> <td><p class=tcb>N</p></td> <td><p class=tcb>V</p></td>
+	  <td><p class=tcb>S</p></td> <td><p class=tcb>Z</p></td>
+      <td><p class=tcb>Разность</p></td> <td><p class=tcb>С</p></td> <td><p class=tcb>N</p></td> <td><p class=tcb>V</p></td>
+	  <td><p class=tcb>S</p></td> <td><p class=tcb>Z</p></td>
+    </tr>
+    <tr bgcolor=#DCDCDC>
+      <td><p class=tc>8888</p></td> <td><p class=tc>25AB</p></td> <td><p class=tc>AE33</p></td>
+	  <td><p class=tc>0</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td>
+      <td><p class=tc>62DD</p></td> <td><p class=tc>0</p></td> <td><p class=tc>0</p></td> <td><p class=tc>1</p></td> <td><p class=tc>1</p></td>
+	  <td><p class=tc>0</p></td>
+    </tr>
+    <tr bgcolor=#EAEAEA>
+      <td><p class=tc>0000</p></td> <td><p class=tc>AB25</p></td> <td><p class=tc>AB25</p></td>
+	  <td><p class=tc>0</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td>
+      <td><p class=tc>54DB</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td> <td><p class=tc>0</p></td> <td><p class=tc>0</p></td>
+	  <td><p class=tc>0</p></td>
+    </tr>
+    <tr bgcolor=#DCDCDC>
+        <td><p class=tc>FFFF</p></td> <td><p class=tc>A25B</p></td> <td><p class=tc>A25A</p></td>
+		<td><p class=tc>1</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td> <td><p class=tc>1</p></td> <td><p class=tc>0</p></td>
+        <td><p class=tc>5DA4</p></td> <td><p class=tc>0</p></td> <td><p class=tc>0</p></td> <td><p class=tc>0</p></td> <td><p class=tc>0</p></td>
+		<td><p class=tc>0</p></td>
+    </tr>
+  </table>
+</center>
+<br>
+
+<p>Анализ полученных результатов показывает, что сумма и разность вычисляются правильно, однако флаги Z и N формируются лишь для старшего байта, а не
+для всего 16-разрядного числа.</p>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_3"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 1.3.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Составим программу умножения двух восьмиразрядных двоичных чисел, хранящихся в памяти данных с адресами 0x0200 и 0x0201. 16-разрядное
+произведение будем формировать в регистровой паре R1-R0. Результат сохраним по адресам 0x0300 (младший байт) и 0x0301 (старший байт).</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+      lds r19,0x0200
+      lds r18,0x0201
+      mul r18,r19    ;умножение r1 : r0 = r18 * r19
+      sts 0x0300,r0
+      sts 0x0301,r1
+end:  rjmp end       ;остановка программы</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Проверка программы на тестовых примерах приводит к результату:</p>
+
+<p><center>02 * 25<sub>16</sub> = 004A;
+10<sub>16</sub> * 25<sub>16</sub> = 0250<sub>16</sub>;
+25<sub>16</sub> * 25<sub>16</sub> = 0559<sub>16</sub>,
+</center>
+который подтверждает её корректность.</p>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_4"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 1.4.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>								
+								
+<p>Написать программу деления восьмиразрядных беззнаковых двоичных чисел для следующего распределения регистров: R0 – делимое, R4 – делитель; R0 –
+частное, R2 - остаток. Операция деления является обратной по отношению к операции умножения и осуществляется циклическими действиями. Так как частное
+можно определить только со старших разрядов, то будем его формировать путём сдвига остатка влево.</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+      ldi r20,9
+      clr r2
+loop: rol r0
+      dec r20
+      breq end
+      rol r2
+      sub r2,r4
+      brcc skip
+      add r2,r4
+      clc
+      rjmp loop
+skip: sec
+      rjmp loop
+end:  rjmp end   ; остановка программы</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Проверка программы на примерах даёт:</p>
+
+<p><center>10<sub>16</sub> : 02 = 08(00); 40<sub>16</sub> : 0F<sub>16</sub> = 04(04); FF<sub>16</sub> : 0A<sub>16</sub> =
+19<sub>16</sub>(05).</center></p>
+
+<p>Анализ полученных результатов показывает, что частное и остаток вычисляются правильно.</p>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_5"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 1.5.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Составим программу сложения двухразрядных двоично-десятичных чисел, программно помещённых в регистры R16 и R17. Результат получим в регистре
+R16.</p>
+
+<table width="100%" cellspacing="0" cellpadding="4" border="0">
+ <tr><td width="490"><pre><Code>.include "m328pdef.inc"
+.def temp =r18
+.def six  =r19
+.def sixty=r20
+summa:
+      ldi r16,0x25         ;исходный операнд
+      ldi r17,0x40         ;исходный операнд
+      mov temp,r17
+
+      ldi r28,0b01100110   ;r28=66
+      ldi six,0b00000110   ;six=06
+      ldi sixty,0b01100000 ;sixty=60
+      neg six              ;доп. код 06
+      neg sixty            ;доп. код 60
+      add r16,r28          ;проверка на необходимость коррекции
+      add r16,temp
+      brhc correcth
+      brcc correctc
+      adc r2,r3            ;сохранить в r2 значение сотни
+end:  rjmp end             ;остановка программы
+
+correcth:                  ;коррекция, если был полуперенос
+      adc r2,r3            ;сохранить в r2 значение флага C
+      add r16,six          ;коррекция младшей тетрады
+      cpse r2,r3           ;учёт единицы
+      rjmp end
+      clc
+      rjmp correctc
+correctc:                  ;коррекция, если был перенос
+      adc r2,r3            ;сохранить в r2 значение флага C
+      add r16,sixty        ;коррекция старшей тетрады
+      rjmp end</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Операция двоично-десятичного вычитания реализуется путём суммирования с дополнительным кодом, который находится по формуле:
+<center>(99<sub>10</sub> – <em>ПрКод</em>) + 1.</center></p>
+
+<p>Результат выполнения тестовых примеров представим в виде таблицы:</p>
+
+<center>
+<table border="1" cellpadding="7" cellspacing="1" width="400">
+  <tr bgcolor="#D1D6E9">
+    <td valign="Middle" rowspan="1"><p class=tcb>1-й операнд</p></td>
+    <td valign="Middle" rowspan="1"><p class=tcb>2-й операнд</p></td>
+    <td valign="Middle" rowspan="1"><p class=tcb>Сумма</p></td>
+    <td valign="Middle" rowspan="1"><p class=tcb>Разность</p></td>
+  </tr>
+  <tr bgcolor=#DCDCDC>
+    <td><p class=tc>40</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>65</p></td>
+    <td><p class=tc>15</p></td>
+  </tr>
+  <tr bgcolor=#EAEAEA>
+    <td><p class=tc>00</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>75</p></td>
+  </tr>
+  <tr bgcolor=#DCDCDC>
+    <td><p class=tc>99</p></td>
+    <td><p class=tc>25</p></td>
+    <td><p class=tc>24</p></td>
+    <td><p class=tc>74</p></td>
+  </tr>
+</table>
+</center><br>
+
+<p>Анализ полученных результатов подтверждает корректность программ двоично-десятичного сложения и вычитания.</p>
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+                                </td></tr></table>
+                            </center>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ColSpan=2>
+
+<table border=0 cellspacing=0 cellpadding=0>
+  <tr>
+    <td background=../Оболочка/images/bg1.gif width=458 height=100 valign=Bottom>
+      <p class=co>Copyright &copy; БГУИР, Кафедра Систем управления, 2023<br><img src=../Оболочка/images/raspor.gif width=1 height=8></p>
+    </td>
+    <td background=../Оболочка/images/bg2.gif width=159 height=100>
+      <a href=#Top onMouseOver="mOver(7)" onMouseOut="mOut(7)">
+	    <img src=../Оболочка/images/07a.gif border=0 alt="К началу документа" name="link7"></a><br>
+      <a href=../index.html onMouseOver="mOver(8)" onMouseOut="mOut(8)">
+	    <img src=../Оболочка/images/08a.gif border=0 alt="К первой странице" name="link8"></a>
+	</td>
+  </tr>
+</table>
+
+                        </td>
+                    </tr>
+                </table>
+</div>
+</body>
+</html>

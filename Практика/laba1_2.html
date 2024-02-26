@@ -1,0 +1,514 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/HTML4/loose.dtd">
+<html>
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>Лабораторная работа №2</title>
+
+ <link rel="stylesheet" type="text/css" href="../Оболочка/msu.css">
+
+ <script type="text/javascript" src="../Оболочка/Components.js"></script>
+ <script src="../Оболочка/highlight.pack.js"></script>
+ <script type="text/javascript">hljs.initHighlightingOnLoad('avrasm');</script>
+</head>
+
+<body bgcolor=#E6E6E6 topmargin=1 leftmargin=1 marginwidth=0 marginheight=0 style="max-width: 1300px;">
+<div class=max>
+<a name="top"></a>
+  <table border=0 width=100% cellspacing=0 cellpadding=0>
+    <tr>
+      <td width="190" height="91" name="link19"><a href="../index.html"><img src="../Оболочка/images/bg01.gif" alt=""></a></td>
+      <td rowspan="2" background=../Оболочка/images/bg02.gif height="120" valign="bottom">
+        <table background=../Оболочка/images/raspor.gif border=0 cellspacing=0 cellpadding=0>
+          <tr> <td width=180></td> <td valign="top" height="75"><p class=h6>Лабораторная работа №2</p></td> </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td background=../Оболочка/images/bg03.gif>
+        <a href=../Программа/index.html onMouseOver="mOver(1)" onMouseOut="mOut(1)">
+		  <img src=../Оболочка/images/01a.gif border=0 width=190 height=29 alt="Рабочая программа" name="link1"></a><br>
+      </td>
+    </tr>
+    <tr>
+      <td background=../Оболочка/images/bg03.gif>
+        <a href=../Теория/micro.html onMouseOver="mOver(2)" onMouseOut="mOut(2)">
+		  <img src=../Оболочка/images/02a.gif width=190 height=29 border=0 alt="Теоретическая часть" name="link2"></a><br>
+      </td>
+    </tr>
+    <tr>
+      <td background=../Оболочка/images/bg09.gif valign=Top>
+        <table border=0 cellspacing=0 cellpadding=0>
+            <tr>
+                <td background=../Оболочка/images/bg04.gif width=190 valign=Top>
+                    <img src=../Оболочка/images/03p.gif border=0 width=190 height=29 alt="Практика. Часть 1"><br>
+                </td>
+            <tr>
+                <td background=../Оболочка/images/bg05.gif width=190 valign=Top>
+                    <a href="part_1.html" onMouseOver="mOver(31)" onMouseOut="mOut(31)"><img src=../Оболочка/images/03a_1.gif width=170 height=22 border=0 alt="Отладочная платформа" name="link31"></a></td>
+            </tr>
+            <tr>
+              <td background=../Оболочка/images/bg06.gif width=190 height=38 valign=Top>
+                <a href="laba1_1.html" onMouseOver="mOver(32)" onMouseOut="mOut(32)"><img src=../Оболочка/images/03a_2.gif width=170 height=22 border=0 alt="Лабораторная работа 1"><br>
+                <img src=../Оболочка/images/03p_3.gif width=170 height=20 border=0 alt="Лабораторная работа 2" name="link33"></a><br>
+                <a href="laba1_3.html" onMouseOver="mOver(34)" onMouseOut="mOut(34)"><img src=../Оболочка/images/03a_4.gif width=170 height=36 border=0 alt="Лабораторная работа 3" name="link34"></a><br>
+                <a href="laba1_4.html" onMouseOver="mOver(35)" onMouseOut="mOut(35)"><img src=../Оболочка/images/03a_5.gif width=170 height=36 border=0 alt="Лабораторная работа 4" name="link35"></a><br>
+                <a href="laba1_5.html" onMouseOver="mOver(36)" onMouseOut="mOut(36)"><img src=../Оболочка/images/03a_6.gif width=170 height=32 border=0 alt="Лабораторная работа 5" name="link36"></a><br>
+                <a href="app.html" onMouseOver="mOver(37)" onMouseOut="mOut(37)"><img src=../Оболочка/images/03a_7.gif width=170 height=20 border=0 alt="Приложение" name="link37"></a><br>
+                  <img src=../Оболочка/images/bg07.gif width=190 height=23><br>
+              </td>
+            </tr>
+            <tr>
+              <td background=../Оболочка/images/bg03.gif valign=Top>
+                <a href="part_2.html" onMouseOver="mOver(4)" onMouseOut="mOut(4)"><img src=../Оболочка/images/04a.gif width=190 height=29 border=0 alt="Практическая часть 2" name="link4"></a><br>
+                <a href=../Заочное/index.html onMouseOver="mOver(5)" onMouseOut="mOut(5)"><img src=../Оболочка/images/05a.gif width=190 height=29 border=0 alt="Заочное" name="link5"></a><br>
+                <a href=../Контроль_знаний/index.html onMouseOver="mOver(6)" onMouseOut="mOut(6)"><img src=../Оболочка/images/06a.gif width=190 height=29 border=0 alt="Контроль знаний" name="link6"></a><br>
+                <img src=../Оболочка/images/bg08.gif width=190 height=13><br>
+
+        </table>
+        </td>
+        <td valign=top><br>
+
+        <table border=0 cellpadding=0 cellspacing=0 width=100%>
+          <tr>
+            <td>
+
+<table border=0 cellpadding=0 cellspacing=0>
+  <tr><td bgcolor=#000000><img src="../Оболочка/images/raspor.gif" height=2></td>
+  <tr><td valign=Center height="30"><span class=h1>Алгоритмы логической обработки данных</span></td></tr>
+  <tr><td bgcolor=#000000><img src="../Оболочка/images/raspor.gif" height=2></td></tr>
+</table><br>
+
+<ul>
+  <dt><a class=m href="#tit1">Краткие теоретические сведения</a></dt>
+  <dt><a class=m href="#tit2">Задание на лабораторную работу</a></dt>
+  <ul>
+    <dt><a class=m href="#tit3_1">Пример решения задачи 2.1</a></dt>
+    <dt><a class=m href="#tit3_2">Пример решения задачи 2.2</a></dt>
+    <dt><a class=m href="#tit3_3">Пример решения задачи 2.3</a></dt>
+    <dt><a class=m href="#tit3_4">Пример решения задачи 2.4</a></dt>
+    <dt><a class=m href="#tit3_5">Пример решения задачи 2.5</a></dt>
+  </ul>
+</ul>
+<hr width="90%" Color="#7685C6" Align="Right">
+<Br>
+
+<p class=h3>Цель работы:</p>
+
+<p>изучить основные приёмы, используемые при программировании логических операций над двоичными числами.</p><br>
+
+
+
+
+<a name="tit1"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Краткие теоретические сведения</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table>
+<br>
+
+<p>Микроконтроллеры способны выполнять команды логических операций "И", "ИЛИ", "исключающее ИЛИ" между соответствующими парами битов операндов двух
+регистров, либо между регистром и непосредственным операндом. Логические операции используются для установки в "1", сброса в "0" и инверсии как
+отдельных битов операндов, так и отдельных линий портов ввода/вывода.</b></a></p>
+
+<ul type="DISK">
+ <li><b>AND</b> – логическое "И" содержимого двух РОН;</li>
+ <li><b>ANDI</b> – логическое "И" между содержимым РОН и 8-разрядной константой;</li>
+ <li><b>OR</b> – логическое “ИЛИ” содержимого двух РОН;</li>
+ <li><b>ORI</b> – логическое “ИЛИ” между содержимым РОН и 8-разрядной константой;</li>
+ <li><b>EOR</b> - логическое “Исключающее ИЛИ” содержимого двух РОН.</li>
+</ul>
+
+<p>Логические операции выполняются поразрядно, т.е. независимо для всех восьми бит операнда. При этом первый операнд находится в одном регистре, а
+другой – во втором. Результат операции помещается в первый регистр. По результату логической операции модифицируются флаги S и Z. Флаг C не
+изменяется.</p>
+
+<p>Сбросить в "0" заданный бит операнда позволяет логическая операция "И". Для этого выполняется команда
+<code style="color: #005599"><b>and/andi</b></code> над операндом и маской, у которой на заданных позициях бит записаны нули. Остальные биты
+маски должны быть единицами. Например, маска 0b11011110 обеспечивает сброс в "0" нулевого и пятого разрядов. Кроме того, командой
+<code style="color: #005599"><b>andi</b></code> можно проверить значение заданного бита. Если, например, необходимо проверить состояние второго
+бита, то маска должна иметь вид 0b00000100. После выполнения команды <code style="color: #005599"><b>andi</b></code> о состоянии бита можно
+судить по флагу Z: Z=1 при B2=0.</p>
+
+<p>Команда <code style="color: #005599"><b>ori</b></code> используется для установки определённых битов в "1", а также упаковки нескольких полей
+в одно слово. Например, для установки в "1" нулевого и пятого разрядов необходимо выполнить операцию
+<code style="color: #005599"><b>ori</b></code> с маской 0b00100001. Результатом операции с операндами XXXX0000 и 0000YYYY будет упакованное
+слово XXXXYYYY.</p>
+
+<p>При помощи <code style="color: #005599"><b>eor</b></code> производится инвертирование определённых битов слова. Например, маска 0b00100001
+обеспечивает инвертирование нулевого и пятого разрядов. Другое применение команды <code style="color: #005599"><b>eor</b></code> связано со
+сравнением слов на абсолютное равенство. В случае, когда операнды совпадают, результат операции содержит нули во всех разрядах, о чём сигнализирует
+флаг Z=1.</p>
+
+<p>Для выполнения логических операций над различными битами одного и того же слова используют следующий приём. Логическая функция представляется в
+виде суммы логических произведений бит. Для каждого произведения формируется своя маска и при помощи команд
+<code style="color: #005599"><b>and</b></code>, <code style="color: #005599"><b>eor</b></code> вычисляется его значение. Далее эти произведения
+суммируются командами <code style="color: #005599"><b>ori</b></code>. Например, для функции
+<i>y = x</i><sub>1</sub><i> • x</i><sub>3</sub><i> + x</i><sub>2</sub><i> • x</i><sub>6</sub></i> выполняются операции "И" с масками 0b00001010 и
+0b01000100. Их результат оценивается по флагу Z. В случае Z=0 значение <i>y</i> полагается равным 1.</p>
+
+<p>Операция сдвига означает перемещение всех битов операнда вправо или влево на одну позицию. Это можно выполнить двумя способами. Первый называется
+логическим сдвигом, при котором выдвинутая позиция битового разряда заполняется нулём. Например, при выполнении логического сдвига вправо на один
+разряд байта 0b10011010, получим 0b01001101.</p>
+
+<p>При арифметическом сдвиге выдвинутая позиция заполняется первоначальным значением знакового разряда. Например, при выполнении арифметического
+сдвига вправо на один разряд байта, значение которого равно 0b10011010, получим число 0b11001101.</p>
+
+<p><b>Команды сдвигов и установки разрядов портов:</b></p>
+
+<ul type="DISK">
+ <li><b>LSL</b> – логический сдвиг влево. Используется для быстрого умножения на число кратное 2<sup>n</sup>;</li>
+ <li><b>LSR</b> – выполняет логический сдвиг вправо. Используется для быстрого деления на число кратное 2<sup>n</sup>;</li>
+ <li><b>ASR</b> – выполняет арифметический сдвиг вправо операнда. Используется для выполнения быстрого деления числа, на число кратное 2<sup>n</sup>;</li>
+ <li><b>ROL</b> – сдвиг влево через флаг переноса;</li>
+ <li><b>ROR</b> – сдвиг вправо через флаг переноса.</li>
+</ul>
+
+<p><b>Команды управления битами РОН:</b></p>
+<ul type="DISK">
+ <li><b>NEG</b> – вычисление дополнительного кода;</li>
+ <li><b>CLR</b> – очистка всех битов РОН в "0";</li>
+ <li><b>SER</b> – установка всех битов РОН в "1";</li>
+ <li><b>CBR</b> – сброс разряда РОН, например CBR R16, 1;</li>
+ <li><b>SBR</b> – установка разряда РОН, например SBR R16, 3.</li>
+</ul>
+
+<p><b>Команды управления флагами регистра состояния:</b></p>
+<ul type="DISK">
+ <li><b>SEC/CLC</b> – установка/сброс флага переноса;</li>
+ <li><b>SEZ/CLZ</b> – установка/сброс флага нуля;</li>
+ <li><b>SEN/CLN</b> – установка/сброс флага отрицательного значения;</li>
+ <li><b>SEV/CLV</b> – установка/сброс флага переполнения дополнительного кода;</li>
+ <li><b>SES/CLS</b> – установка/сброс флага знака;</li>
+ <li><b>SEH/CLH</b> – установка/сброс флага половинного переноса;</li>
+ <li><b>SET/CLT</b> – установка/сброс пользовательского флага T.</li>
+</ul>
+<br><br><br><br>
+
+
+
+
+<a name="tit2"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src= "../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Задания на лабораторную работу</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table>
+<br>
+
+<p><b>ЗАДАЧА 2.1.</b> Написать программу, которая позволяет установить, сбросить, инвертировать <em>i</em> и <em>j</em> биты заданного операнда,
+находящегося в регистре R. Результат представить в виде таблицы. Программы проверить для операндов: FF<sub>16</sub>, F0<sub>16</sub>,
+0F<sub>16</sub>, 00<sub>16</sub>.</p>
+
+<Hr width="90%" Color="#7685C6" align="Right"><br>
+
+<p><b>ЗАДАЧА 2.2.</b> Написать программу, обеспечивающую проверку <i>i</i>-го бита заданного операнда, хранящегося в регистре R.<br>
+Если результат равен 0, то в ячейку памяти данных 0x0200 поместить 0, иначе - поместить 1.<br>
+Программу проверить для следующих операндов: FF<sub>16</sub>, F0<sub>16</sub>, 0F<sub>16</sub>, 00<sub>16</sub>.</p>
+
+<Hr width="90%" Color="#7685C6" align="Right"><br>
+
+<p><b>ЗАДАЧА 2.3.</b> Написать программу, обеспечивающую выполнение логической операции:</p>
+
+<p><Center><i>y=x<sub>i</sub>*x<sub>j</sub>+x<sub>k</sub>*NOT</i>(<i>x<sub>l</sub></i>),</Center></p>
+
+<p>где <em>i, j, k, l</em> – номера битов числа, содержащегося в регистре R. Результат поместить в память данных по адресу 0x02**. Программу
+проверить для операндов: 1F<sub>16</sub>, 2B<sub>16</sub>, 0C<sub>16</sub>, A1<sub>16</sub>.</p>
+
+<Hr width="90%" Color="#7685C6" align="Right"><br>
+
+<p><b>ЗАДАЧА 2.4.</b> Написать программу, обеспечивающую вычисление суммы единиц в массиве чисел, расположенном в памяти программ. Результат
+поместить в регистры R, R1. Количество элементов в массиве – 10<sub>10</sub>. Программу протестировать на случайных числах.</p>
+
+<Hr width="90%" Color="#7685C6" align="Right"><br>
+
+<p><b>ЗАДАЧА 2.5.</b> Написать программы умножения (деления) 16-разрядного беззнакового операнда на 4. Операнд расположен в регистрах R, R1. Адрес
+результата – в памяти данных 0x03**, 0x03**+1, 0x03**+2. При делении остаток не сохранять. Программы проверить на примерах:
+1) 0002<sub>16</sub> • (/) 4; 2) 0010<sub>16</sub> • (/) 4; 3) 0100<sub>16</sub> • (/) 4; 4) А**В<sub>16</sub> • (/) 4.</p>
+
+<p><b>Указание: </b> воспользоваться операциями логического сдвига влево/вправо.</p><br>
+
+<table border=0 cellpadding=0 cellspacing=0 width=95%>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#800000></td></tr>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#FF0000></td></tr>
+  <tr>
+    <td valign=ToP><p class=pr>Примечание:&nbsp;&nbsp;</p></td>
+    <td valign=Center><p class=prt>Номера разрядов <i>i</i>, <i>j</i>, <i>k</i>, <i>l</i> участвующих в операциях, вычисляются как остаток от
+     деления на 8 числа **. Остаток от деления # = <i>i</i>, # + 2 = <i>j</i>, # + 4 = <i>k</i>, # + 6 = <i>l</i> соответственно.</p></td>
+  </tr>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#800000></td></tr>
+  <tr><td><img src="../Оболочка/images/raspor.gif" height=1></td><td bgcolor=#FF0000></td></tr>
+</table>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_1"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 2.1.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Написать программу, которая позволяет установить, сбросить, инвертировать 1 и 3 биты операндов FF<sub>16</sub>, F0<sub>16</sub>, 0F<sub>16</sub>,
+00<sub>16</sub>.</p>
+
+<p>Маски для установки, сброса и инвертирования соответственно будут: 0b00001010; 0b11110101; 0b00001010.</p>
+
+<table width="470">
+ <tr>
+  <td><pre><code>.include "m328pdef.inc"
+
+init: ldi r16, 0xFF       ; в r16 помещается заданный операнд
+      ldi r17, 0b00001010 ; маска для сброса
+      ldi r18, 0b11110101 ; маска для установки/инвертирования
+
+main: and r16, r17	  ; сброс в "0" битов операнда
+      or r16, r18	  ; установка в "1" битов операнда
+      eor r16, r18	  ; инверсия битов операнда</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Результаты выполнения представим в виде таблицы:</p>
+
+<Center>
+ <table border="1" cellpadding="7" cellspacing="1" width="430">
+     <tr bgcolor="#D1D6E9">
+         <td valign="Middle" rowspan="2"><p class=tcb>Операнд</p></td>
+         <td valign="Middle" colspan="3"><p class=tcb>Результат</p></td>
+     </tr>
+     <tr>
+         <td><p class=tcb>B<sub>i,j</sub>=1</p></td>
+         <td><p class=tcb>B<sub>i,j</sub>=0</p></td>
+         <td><p class=tcb>B<sub>i,j</sub>=NOT(B<sub>i,j</sub>)</p></td>
+     </tr>
+     <tr bgcolor=#DCDCDC>
+         <td><p class=tc>FF</p></td>
+         <td><p class=tc>FF</p></td>
+         <td><p class=tc>F5</p></td>
+         <td><p class=tc>F5</p></td>
+     </tr>
+     <tr bgcolor=#EAEAEA>
+         <td><p class=tc>F0</p></td>
+         <td><p class=tc>FA</p></td>
+         <td><p class=tc>F0</p></td>
+         <td><p class=tc>FA</p></td>
+     </tr>
+     <tr bgcolor=#DCDCDC>
+         <td><p class=tc>0F</p></td>
+         <td><p class=tc>0F</p></td>
+         <td><p class=tc>05</p></td>
+         <td><p class=tc>05</p></td>
+     </tr>
+     <tr bgcolor=#EAEAEA>
+         <td><p class=tc>00</p></td>
+         <td><p class=tc>0A</p></td>
+         <td><p class=tc>00</p></td>
+         <td><p class=tc>0A</p></td>
+     </tr>
+ </table>
+</Center>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_2"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 2.2.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Написать программу, обеспечивающую проверку <i>i</i>-го бита заданного операнда, хранящегося в регистре R16. По состоянию R17 будем судить
+о результате.</p>
+
+<table width="470">
+ <tr>
+  <td><pre><code>.include "m328pdef.inc"
+
+init: ldi r16, 0xFF        ;исходный операнд
+      clr r17              ;начальное значение результата
+
+main: andi r16, 0b01010000 ;сброс всех битов кроме третьего
+      breq end             ;переход если флаг Z равен 1
+      ldi r17, 1
+end:  rjmp end</Code></pre>
+</td>
+<td></td>
+</tr></table>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_3"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 2.3.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Написать программу, обеспечивающую выполнение логической операции
+<i>y = x</i><sub>1</sub> * <i>x</i><sub>2</sub> + <i>x</i><sub>4</sub> * NOT(<i>x</i><sub>6</sub>) битов числа, содержащегося в регистре R16.
+Программу проверить для операнда: BB<sub>16</sub>.</p>
+
+<table width="470">
+    <tr>
+        <td><pre><code>.include "m328pdef.inc"
+
+main:                      ;x1*x2+x4*not(x6)
+      ldi r16,  0b10111011 ;0xBB исходное число
+      mov r17,r16
+      andi r17, 0b00000110 ;проверка 1 и 2 бита
+      cpi r17,  0b00000110 ;0x03
+      breq end             ;переход если флаг Z=1
+
+part2:                     ;проверка x4*not(x6)
+      mov r17,r16          ;восстановление в R17 0xBB
+      andi r17,0b01010000  ;выделение 4 и 6 битов
+      ldi  r18,0b01000000  ;маска для инвертирования 6 бита
+      eor  r17,r18         ;инвертирование 6 бита
+      cpi  r17,0b01010000  ;проверка 4 и 6 битов
+end:  rjmp end</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>По окончании программы флаг Z отображает результат функции <em>y</em>.</p>
+<br><br><br><br>
+
+
+
+
+<a name="tit3_4"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 2.4.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+<p>Составим программу подсчёта числа единиц в байте, расположенном в памяти программ. Результат из регистра R0 сохраним в памяти данных 0x0200.</p>
+
+<p>Организуем циклический алгоритм, на каждом шаге которого операнд сдвигается влево с добавлением нуля в младший бит. Затем анализируется флаг
+переноса C, и если он установлен в единицу, то увеличивается содержимое регистра R1. Операнд из массива чисел предварительно определим через
+<i>array: .db</i>.</p>
+
+<p>Программа подсчёта числа единиц имеет вид:</p>
+
+<table width="470">
+    <tr>
+        <td><pre><code>.include "m328pdef.inc"
+
+.def temp_reg = r0
+.def rezult = r1
+.cseg
+
+init: ldi zl, LOW(array*2)
+      ldi zh, HIGH(array*2)
+      clr rezult           ;rezult = 0
+      lpm temp_reg, z+     ;взять из памяти программ число
+
+main: lsl temp_reg         ;сдвиг влево, добавляя справа 0
+      brcc m1              ;если C = 0 переход на m1
+      inc rezult           ;иначе rezult = rezult + 1
+m1:   brne main	           ;конец ?
+end:  sts 0x0200, rezult   ;сохранить результат в ОЗУ
+
+array:.db 0x0F</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>Проверка программы для операндов FF, 77, 21 приводит соответственно к результату 8, 6, 2.</p>
+<br><br><br><br>
+
+
+
+<a name="tit3_5"></a>
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 ColSpan=2><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+  <tr><td width=30></td><td valign=Center><span class=h>Пример решения задачи 2.5.</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" ColSpan="2"><img src="../Оболочка/images/raspor.gif" height=1></td></tr>
+</table><br>
+
+
+<p>Составим программы, обеспечивающие умножение (деление без сохранения остатка) операнда на 2. При выполнении умножения
+сохраним знак результата. Адреса операндов 0x0200, 0x0201; адреса результатов – 0x0300, 0x0301. Программу проверим
+для операндов 0F и 81.</p>
+
+<p>Умножение:</p>
+
+<table width="470">
+  <tr>
+    <td><pre><code>.include "m328pdef.inc"
+
+      lds r19, 0x0200 ;в r19 помещается операнд
+      lsl r19         ;сдвиг числа влево
+      brcs setT       ;переход если установлен флаг С
+part2:
+      brts mod        ;переход если установлен флаг Т
+      rjmp save
+
+mod:  ori r19, 0x80   ;установка знакового разряда с помощью маски
+save: sts 0x0301, r19 ;сохранение результата
+end:  rjmp end
+setT:
+      set             ;установка флага Т, если был установлен С
+      rjmp part2
+</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+                            <p>Деление:</p>
+
+                            <table width="470">
+                                <tr>
+                                    <td><pre><code>.include "m328pdef.inc"
+     lds r17, 0x0200  ;в r17 помещается операнд
+     asr r17          ;деление содержимого на 2 с сохранением знака
+     sts 0x0300, r17  ;сохранение содержимого r17 в памяти данных по адресу 0х0300
+end: rjmp end</Code></pre>
+</td>
+<td></td>
+</tr></table>
+
+<p>После выполнения программ получим следующие результаты:</p>
+
+<p>(0F)*(02)=1E, (81)*(02)=82.<br>
+   (0F)/(02)=07, (81)/(02)=80.</p>
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+                                </td></tr></table>
+                            </center>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ColSpan=2>
+
+<table border=0 cellspacing=0 cellpadding=0>
+  <tr>
+    <td background=../Оболочка/images/bg1.gif width=458 height=100 valign=Bottom>
+      <p class=co>Copyright &copy; БГУИР, Кафедра Систем управления, 2023<br><img src=../Оболочка/images/raspor.gif width=1 height=8></p>
+    </td>
+    <td background=../Оболочка/images/bg2.gif width=159 height=100>
+      <a href=#Top onMouseOver="mOver(7)" onMouseOut="mOut(7)">
+	    <img src=../Оболочка/images/07a.gif border=0 alt="К началу документа" name="link7"></a><br>
+      <a href=../index.html onMouseOver="mOver(8)" onMouseOut="mOut(8)">
+	    <img src=../Оболочка/images/08a.gif border=0 alt="К первой странице" name="link8"></a>
+	</td>
+  </tr>
+</table>
+
+                        </td>
+                    </tr>
+                </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+    <Meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <Title>Контроль знаний</Title>
+    <Link Rel="stylesheet" Type="text/css" Href="../Оболочка/msu.css">
+
+    <script type="text/javascript" src="../Оболочка/Components.js"></script>
+    <script>
+        function viewResult() {
+            var numberofquestions = 2;
+            var correct = 0;
+            for (var i = 0; i < numberofquestions; i++) {
+                if (document.all("test" + i.toString())['correct'].checked) {
+                    correct++
+                }
+            }
+            alert("Правильных ответов: " + correct.toString() + " из " + numberofquestions.toString() + " возможных");
+            location.reload();
+        }
+    </script>
+
+</head>
+
+<body Bgcolor=#E6E6E6 TopMargin=1 LeftMargin=1 MarginWidth=0 MarginHeight=0 style="max-width: 1300px;">
+<div class=max>
+
+        <A Name="Top"></A>
+        <Table Border=0 Width=100% CellSpacing=0 CellPadding=0>
+            <Tr>
+                <td width="190" height="91" name="link19"><a href="../index.html"><img src="../Оболочка/images/bg01.gif" alt=""></a></td>
+                <Td Rowspan=2 BackGround=../Оболочка/images/bg02.gif Height=120 Valign=Bottom
+                    style="background-repeat:no-repeat;">
+
+                    <Table BackGround=../Оболочка/images/raspor.gif Border=0 CellSpacing=0 CellPadding=0>
+                        <Tr>
+                            <Td Width=225></Td>
+                            <Td align="center" valign="top" height="75"><P Class=h6>Контроль знаний</P><br></a></Td>
+                        </Tr>
+                    </Table>
+
+                </Td>
+            </Tr>
+            <tr>
+                <td BackGround=../Оболочка/images/bg03.gif style="background-repeat:no-repeat;">
+                    <a Href=../Программа/index.html onMouseOver="mOver(1)" onMouseOut="mOut(1)"><Img
+                            Src=../Оболочка/images/01a.gif Border=0 Width=190 Height=29 Alt="Рабочая программа"
+                            name="link1"></a><br></td>
+            </tr>
+            <tr>
+                <td BackGround=../Оболочка/images/bg09.gif Valign=Top>
+
+                    <table Border=0 CellSpacing=0 CellPadding=0>
+                        <tr>
+                            <td BackGround=../Оболочка/images/bg03.gif Valign=Top>
+                                <a href=../Теория/micro.html onMouseOver="mOver(2)" onMouseOut="mOut(2)"><img
+                                        src=../Оболочка/images/02a.gif width=190 height=29 border=0 Alt="Теоретическая часть"
+                                        name="link2"></a><br>
+                                <a href=../Практика/part_1.html onMouseOver="mOver(3)" onMouseOut="mOut(3)"><img
+                                        src=../Оболочка/images/03a.gif width=190 height=29 border=0
+                                        Alt="Практическая часть 1" name="link3"></a><br>
+                                <a href=../Практика/part_2.html onMouseOver="mOver(4)" onMouseOut="mOut(4)"><img
+                                        src="../Оболочка/images/04a.gif" width=190 height=29 border=0
+                                        Alt="Практическая часть 2" name="link4"></a><br>
+                                <a href=../Заочное/index.html onMouseOver="mOver(5)" onMouseOut="mOut(5)">
+                                    <img
+                                        src="../Оболочка/images/05a.gif" border=0 Alt="Заочное"
+                                        name="link5">
+                                </a><br>
+                                <a href=../Контроль_знаний/index.html><img
+                                        src=../Оболочка/images/06p.gif width=190 height=29 border=0 Alt="Контроль знаний"
+                                        name="link6"></a><br>
+                                <img src=../Оболочка/images/bg08.gif width=190 height=13><br>
+                            </td>
+                    </table>
+                </td>
+                <Td Valign=Top>
+                    <Table Border=0 Width=95% CellSpacing=0 CellPadding=0>
+                        <Tr>
+                            <Td>
+                                <Br>
+
+                                <form>
+
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 colspan="2"><img src=../Оболочка/images/raspor.gif height="1"></td></tr>
+  <tr><td width="30"></td><td valign=center><span class=h>Флаг С регистра статуса SREG устанавливается в 1 в случае:</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" colspan="2"><img src=../Оболочка/images/raspor.gif height="1"></td></tr>
+</table>								
+
+<P>
+  <Input name=test0 type=radio> Получилось чётное количество единиц в результате.<Br>
+  <Input name=test0 type=radio id=correct> В результате операции произошло переполнение разрядной сетки регистра-приёмника.<Br>
+  <Input name=test0 type=radio> Результат операции равен 0.<Br>
+  <Input name=test0 type=radio> Произошёл перенос/заём из младшей тетрады в старшую.<Br>
+  <Input name=test0 type=radio> Старший разряд регистра-приёмника установился в 1.<Br><Br>
+</P>
+
+<table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#ABB3D5>
+  <tr><td bgcolor=#000000 colspan="2"><img src=../Оболочка/images/raspor.gif height="1"></td></tr>
+  <tr><td width="30"></td><td valign=center><span class=h>Каков будет результат вычитания 01<Sub>16</Sub> - 89<Sub>16</Sub> и как при этом изменятся флаги С и V регистра статуса SREG?:</span></td></tr>
+  <tr><td bgcolor=#000000 width="25" colspan="2"><img src=../Оболочка/images/raspor.gif height="1"></td></tr>
+</table>								
+
+<P>
+  <Input name=test1 type=radio> Результат равен 78<Sub>16</Sub>. Флаги: С= 0; V = 0.<Br>
+  <Input name=test1 type=radio> Результат равен 78<Sub>16</Sub>. Флаги: С= 0; V = 1.<Br>
+  <Input name=test1 type=radio> Результат равен 22<Sub>16</Sub>. Флаги: С= 1; V = 0.<Br>
+  <Input name=test1 type=radio id=correct> Результат равен 78<Sub>16</Sub>. Флаги: С= 1; V = 0.<Br>
+  <Input name=test1 type=radio> Результат равен 78<Sub>16</Sub>. Флаги: С= 1; V = 1.<Br><Br>
+</P>
+
+
+                                    <Center>
+                                        <Br>
+                                        <Br><Input type=button value="Проверить" onClick="viewResult()">
+                                    </center>
+                                </form>
+
+                            </Td>
+                        </Tr>
+                    </Table>
+
+                    <Hr Width="90%" Color="#7685C6" Align="Right">
+                    <Br>
+
+                </Td>
+            </tr>
+            <Tr>
+                <Td ColSpan=2>
+
+                    <Table Border=0 CellSpacing=0 CellPadding=0>
+                        <Tr>
+                            <Td BackGround=../Оболочка/images/bg1.gif Width=458 Height=100 Valign=Bottom>
+                                <P Class=co>Copyright &copy; БГУИР, Кафедра Систем управления, 2020<Br>
+                                    <Img Src=../Оболочка/images/raspor.gif Width=1 Height=8></P></Td>
+                            <td backGround=../Оболочка/images/bg2.gif Width=159 Height=100>
+                                <a href=#Top onMouseOver="mOver(7)" onMouseOut="mOut(7)">
+                                    <img src=../Оболочка/images/07a.gif Width=159 Height=46 Border=0
+                                         Alt="В начало документа" name="link7"></A><Br>
+                                <a href=../index.html onMouseOver="mOver(8)" onMouseOut="mOut(8)">
+                                    <img src=../Оболочка/images/08a.gif Width=159 Height=54 Border=0
+                                         Alt="В конец документа" name="link8"></A></Td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+</div>
+</body>
+</html>

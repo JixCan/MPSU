@@ -1,0 +1,247 @@
+<HTML>
+
+<Head>
+<Meta http-equiv="Content-Type" content="text/html; charset=windows1251">
+<Title>Test AutoLisp 1</Title>
+<Link Rel="stylesheet" Type="text/css" Href="../../оболочка/css/acad.css">
+
+<Script Language="JavaScript"><!--
+	function mOver(num) {
+		if (document.images) {
+			document.images['link'+num].src=eval('active'+num+'.src');
+		}
+	}
+	function mOut(num) {
+		if (document.images) {
+			document.images['link'+num].src=eval('normal'+num+'.src');
+		}
+	}
+//-->
+function viewResult(f) {
+numberofquestions=10
+correct=0
+for (i=0; i<numberofquestions; i++){
+if (document.all("test"+i.toString())['correct'].checked){correct++}}
+
+document.write("Правильных ответов: " + correct.toString()+" из " + numberofquestions.toString()+" возможных "+"<Br>")
+document.write("<a href=test_autolisp_1.html url=test_autolisp_1.html>Пройти вновь</a>")
+}
+</Script>
+
+</Head>
+
+<Body Bgcolor=#E6E6E6 TopMargin=1 LeftMargin=1 MarginWidth=0 MarginHeight=0 style="max-width: 1300px;">
+<Script Language="JavaScript"><!--
+if (document.images) {
+	normal1=new Image(190,29);normal1.src="../../оболочка/images/01a.gif";
+	active1=new Image(190,29);active1.src="../../оболочка/images/01p.gif";
+	normal2=new Image(190,29);normal2.src="../../оболочка/images/02a.gif";
+	active2=new Image(190,29);active2.src="../../оболочка/images/02p.gif";
+	normal3=new Image(190,29);normal3.src="../../оболочка/images/03a.gif";
+	active3=new Image(190,29);active3.src="../../оболочка/images/03p.gif";
+	normal7=new Image(190,29);normal7.src="../../оболочка/images/7a.gif";
+	active7=new Image(190,29);active7.src="../../оболочка/images/7p.gif";
+	normal8=new Image(190,29);normal8.src="../../оболочка/images/08a.gif";
+	active8=new Image(190,29);active8.src="../../оболочка/images/08p.gif";
+	normal14=new Image(159,46);normal14.src="../../оболочка/images/09a.gif";
+	active14=new Image(159,46);active14.src="../../оболочка/images/09p.gif";
+	normal15=new Image(159,54);normal15.src="../../оболочка/images/10a.gif";
+	active15=new Image(159,54);active15.src="../../оболочка/images/10p.gif";
+	normal19=new Image(190,91);normal19.src="../../оболочка/images/bg01.gif";
+	
+	normal24=new Image(170,19);normal24.src="../../оболочка/images/04a.gif";
+	active24=new Image(170,19);active24.src="../../оболочка/images/04p.gif";
+	normal26=new Image(170,19);normal26.src="../../оболочка/images/06a.gif";
+	active26=new Image(170,19);active26.src="../../оболочка/images/06p.gif";
+	normal10=new Image(170,25);normal10.src="../../оболочка/images/05_1a.gif";
+	active10=new Image(170,25);active10.src="../../оболочка/images/05_1p.gif";
+	normal12=new Image(170,19);normal12.src="../../оболочка/images/05_3a.gif";
+	active12=new Image(170,19);active12.src="../../оболочка/images/05_3p.gif";
+	normal13=new Image(170,19);normal13.src="../../оболочка/images/8a.gif";
+	active13=new Image(170,19);active13.src="../../оболочка/images/8p.gif";
+}
+//-->
+</Script>
+
+<Left>
+<A Name="Top"></A>
+<Table Border=0 Width=100% CellSpacing=0 CellPadding=0>
+<Tr>
+ <Td BackGround=../../оболочка/images/bg01.gif Width=190 Height=91 name="link19">&nbsp;</Td>
+ <Td Rowspan=2 BackGround=../../оболочка/images/bg02_mech.gif Width=100% Height=120 Valign=Bottom>
+
+<Table BackGround=../../оболочка/images/raspor.gif Border=0 CellSpacing=0 CellPadding=0>
+ <Tr>
+  <Td Width=200></Td>
+  <Td><P Class=h6>Тест по AutoLisp<Br><Img Src=../../оболочка/images/raspor.gif Width=1 Height=43></P></Td>
+ </Tr>
+</Table>
+
+</Td></Tr>
+<Tr>
+ <Td BackGround=../../оболочка/images/bg03.gif>
+ <A Href=../../Программа/!rabprog.html onMouseOver="mOver(26)" onMouseOut="mOut(26)"><Img Src=../../оболочка/images/06a.gif Width=190 Height=29 Border=0 
+Alt="rabprog" name="link26"></A><Br></Td>
+</Tr>
+<Tr>
+ <Td BackGround=../../оболочка/images/bg09.gif Valign=Top>
+
+
+<Table Border=0 CellSpacing=0 CellPadding=0>
+<Tr><Td BackGround=../../оболочка/images/bg03.gif Valign=Top>
+	<A Href=../../Теория/!lekcii.html onMouseOver="mOver(7)" onMouseOut="mOut(7)"><Img Src=../../оболочка/images/7a.gif Width=190 Height=29 Border=0 
+Alt="lekcii" name="link7"></A><Br>
+<Tr><Td BackGround=../../оболочка/images/bg03.gif Valign=Top>
+	 <A Href=../../Практика/!zadanie.html onMouseOver="mOver(13)" onMouseOut="mOut(13)"><Img Src=../../оболочка/images/8a.gif Width=190 Height=29 Border=0 
+Alt="laboratornue" name="link13"></A><Br>
+ </Td>
+<Tr><Td BackGround=../../оболочка/images/bg04.gif Valign=Top>
+  <A Href=../!samocontrol.html onMouseOver="mOver(17)" onMouseOut="mOut(17)"><Img Src=../../оболочка/images/05p.gif Width=190 Height=29 Border=0 Alt="Test" name="link17"></A><Br>
+<Tr><Td BackGround=../../оболочка/images/bg05.gif Width=190 Valign=Top>
+  <A Href="../!samocontrol.html#1" onMouseOver="mOver(10)" onMouseOut="mOut(10)"><Img Src=../../оболочка/images/05_1a.gif Width=170 Height=25 Border=0 Alt="AutoCAD" name="link10"></A><Br></Td></Tr>
+<Tr><Td BackGround=../../оболочка/images/bg06.gif Width=190 Height=36 Valign=Top>
+  <A Href="../!samocontrol.html#2" onMouseOver="mOver(11)" onMouseOut="mOut(11)"><Img Src=../../оболочка/images/05_2p.gif Width=170 Height=19 Border=0 Alt="AutoLisp" name="link11"></A><Br>
+  <A Href="../!samocontrol.html#3" onMouseOver="mOver(12)" onMouseOut="mOut(12)"><Img Src=../../оболочка/images/05_3a.gif Width=170 Height=19 Border=0 Alt="Mechanical Desktop" name="link12"></A><Br>
+  <Img Src=../../оболочка/images/bg07.gif Width=190 Height=23><Br></Td></Tr>
+<Tr><Td BackGround=../../оболочка/images/bg03.gif Valign=Top>
+    <!--<A Href=!rabprog.html onMouseOver="mOver(26)" onMouseOut="mOut(26)"><Img Src=../../оболочка/images/06a.gif Width=190 Height=29 Border=0 
+Alt="rabprog" name="link26"></A><Br> -->
+  <Img Src=../../оболочка/images/bg08.gif Width=190 Height=13><Br>
+</Td>
+</Table></Td>
+ <Td Valign=Top>
+<P><Br></P>
+<Table Border=0 Width=100% CellSpacing=0 CellPadding=0>
+<Tr>
+ <Td>
+
+<form>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>1.Что из перечисленного не является стилем программирования?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test0 type=radio> Объектно-ориентированный<Br>
+<input name=test0 type=radio id=correct> Математический<Br>
+<input name=test0 type=radio> Логический<Br>
+<input name=test0 type=radio> Функциональный</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>2.Какие три управляющие конструкции достаточны для реализации любого алгоритма?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test1 type=radio> Последовательное выполнение, цикл, переход<Br>
+<input name=test1 type=radio id=correct> Последовательное выполнение, цикл, ветвление<Br>
+<input name=test1 type=radio> Условный переход, безусловный переход, цикл<Br>
+<input name=test1 type=radio> Последовательное выполнение, цикл, вызов подпрограммы</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>3.Какое из перечисленных значений функция не может возвращать?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test2 type=radio> Пустое множество<Br>
+<input name=test2 type=radio> Скаляр<Br>
+<input name=test2 type=radio id=correct> Вектор</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>4.Что такое атом?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test3 type=radio id=correct> Структурная единица языка Lisp<Br>
+<input name=test3 type=radio> Первый символ списка<Br>
+<input name=test3 type=radio> Любые вещественные числа</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>5.Почему Лисп - язык искуственного интеллекта?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test4 type=radio> В нем используется обратная польская запись<Br>
+<input name=test4 type=radio id=correct> Программа на Лиспе может менять саму себя в процессе выполнения<Br>
+<input name=test4 type=radio> В нем нет различия между программами и данными<Br>
+<input name=test4 type=radio> Лисп удобен для решения задач искуственного интеллекта</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>6.Могут ли внутри списка быть вложенные списки?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test5 type=radio id=correct> Да<Br>
+<input name=test5 type=radio> Нет<Br>
+<input name=test5 type=radio> Могут, но только одного уровня вложенности</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>7.Укажите правильную запись формулы для вычисления дискриминанта в обратной польской записи</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test6 type=radio> ( - ( * b b ) ( * 4 a c )<Br>
+<input name=test6 type=radio id=correct> ( - ( * b b ) ( * 4 a c ) )<Br>
+<input name=test6 type=radio> ( - ( b * b ) ( 4 * a * c ) )<Br>
+<input name=test6 type=radio> ( * b b ) - ( * 4 a c )</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>8.Какое имя переменной в Автолиспе будет допустимым?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test7 type=radio id=correct> @abc<Br>
+<input name=test7 type=radio> 2ab<Br>
+<input name=test7 type=radio> a  b<Br>
+<input name=test7 type=radio> 3.14</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>9.Верна ли синтаксически следующая запись: ( SETQ T ( * 4 20 ) )</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test8 type=radio> Да<Br>
+<input name=test8 type=radio id=correct> Нет</P><Br>
+
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>10.Сколько символов умещается в переменной символьного типа?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test9 type=radio> 1<Br>
+<input name=test9 type=radio id=correct> 127<Br>
+<input name=test9 type=radio> 256<Br>
+<input name=test9 type=radio> 255</P><Br>
+
+<center>
+<input type=button value="Проверить" onClick="viewResult(this.form)">
+</center>
+</form>
+
+</Td></Tr></Table>
+
+<Hr Width="90%" Color="#7685C6" Align="Right">
+<Br>
+
+ </Td>
+</Tr>
+<Tr>
+ <Td ColSpan=2>
+
+<Table Border=0 CellSpacing=0 CellPadding=0>
+ <Tr>
+  <Td BackGround=../../оболочка/images/b1.gif Width=458 Height=100 Valign=Bottom>
+   <P Class=co>Copyright &copy; БГУИР, Кафедра Систем управления, 2010<Br>
+   <Img Src=../../оболочка/images/raspor.gif Width=1 Height=8></P></Td>
+  <Td BackGround=../../оболочка/images/b2.gif Width=159 Height=100>
+   <A Href=#Top onMouseOver="mOver(14)" onMouseOut="mOut(14)">
+<Img Src=../../оболочка/images/09a.gif Width=159 Height=46 Border=0 Alt="К началу документа" name="link14"></A><Br>
+   <A Href=../../Практика/content/lb1/!acad.html onMouseOver="mOver(15)" onMouseOut="mOut(15)">
+<Img Src=../../оболочка/images/10a.gif Width=159 Height=54 Border=0 Alt="К первой странице" name="link15"></A></Td>
+ </Tr>
+</Table>
+
+ </Td>
+</Tr>
+</Table>
+
+</Body>
+</HTML>

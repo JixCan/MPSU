@@ -1,0 +1,739 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 transitional//EN" "http://www.w3.org/tr/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Отладочная платформа Arduino</title>
+
+    <link rel="stylesheet" type="text/css" href="../Оболочка/msu.css">
+    <link rel="stylesheet" type="text/css" href="../Оболочка/fancybox/jquery.fancybox-1.3.4.css" media="screen">
+
+    <script type="text/javascript" src="../Оболочка/jquery.pack.js"></script>
+    <script type="text/javascript" src="../Оболочка/Components.js"></script>
+    <script type="text/javascript" src="../Оболочка/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="../Оболочка/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="../Оболочка/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad('avrasm');</script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.images").fancybox({
+                'transitionIn': 'fade',
+                'transitionOut': 'fade',
+                'titlePosition': 'inside',
+                'padding': 10,
+                'cyclic': true
+            });
+        });
+        $(function () {
+            $('div.post_body, div.signature').each(function () {
+                initPost($(this))
+            });
+        });
+    </script>
+</head>
+
+<body bgcolor=#E6E6E6 topmargin=1 leftmargin=1 marginwidth=0 marginheight=0 style="max-width: 1300px;">
+<div class=max>
+
+    <a name="Top"></a>
+    <table border=0 width=100% cellspacing=0 cellpadding=0>
+        <tr>
+            <td width="190" height="91" name="link19"><a href="../index.html"><img src="../Оболочка/images/bg01.gif" alt=""></a></td>
+            <td rowspan="2" background=../Оболочка/images/bg02_2.gif height="120" valign="bottom">
+                <table background=../Оболочка/images/raspor.gif border=0 cellspacing=0 cellpadding=0>
+                    <tr>
+                        <td width=180></td>
+                        <td valign="top" height="75"><p class=h6>Отладочная платформа</p></td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td background=../Оболочка/images/bg03.gif>
+                <a href=../Программа/index.html onMouseOver="mOver(1)" onMouseOut="mOut(1)"><img
+                        src='../Оболочка/images/01a.gif' border=0 width=190 height=29 alt="Рабочая программа"
+                        name="link1"></a><br></td>
+        </tr>
+        <tr>
+            <td background=../Оболочка/images/bg03.gif>
+                <a href=../Теория/micro.html onMouseOver="mOver(2)" onMouseOut="mOut(2)"><img
+                        src='../Оболочка/images/02a.gif' width=190 height=29 border=0 alt="Теоретическая часть"
+                        name="link2"></a><br>
+            </td>
+        </tr>
+        <tr>
+            <td background=../Оболочка/images/bg09.gif valign=Top>
+                <table border=0 cellspacing=0 cellpadding=0>
+                    <tr>
+                        <td background=../Оболочка/images/bg04.gif width=190 valign=Top>
+                            <img src=../Оболочка/images/03p.gif border=0 width=190 height=29 alt="Практика. Часть 1"><br>
+                        </td>
+                    <tr>
+                        <td background=../Оболочка/images/bg05.gif width=190 valign=Top>
+                            <img src=../Оболочка/images/03p_1.gif width=170 height=22 border=0
+                                 alt="Отладочная платформа"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td background=../Оболочка/images/bg06.gif width=190 height=38 valign=Top>
+                            <a href="laba1_1.html" onMouseOver="mOver(32)" onMouseOut="mOut(32)"><img
+                                    src=../Оболочка/images/03a_2.gif width=170 height=22 border=0
+                                    alt="Лабораторная работа 1" name="link32"></a><br>
+                            <a href="laba1_2.html" onMouseOver="mOver(33)" onMouseOut="mOut(33)"><img
+                                    src=../Оболочка/images/03a_3.gif width=170 height=20 border=0
+                                    alt="Лабораторная работа 2" name="link33"></a><br>
+                            <a href="laba1_3.html" onMouseOver="mOver(34)" onMouseOut="mOut(34)"><img
+                                    src=../Оболочка/images/03a_4.gif width=170 height=36 border=0
+                                    alt="Лабораторная работа 3" name="link34"></a><br>
+                            <a href="laba1_4.html" onMouseOver="mOver(35)" onMouseOut="mOut(35)"><img
+                                    src=../Оболочка/images/03a_5.gif width=170 height=36 border=0
+                                    alt="Лабораторная работа 4" name="link35"></a><br>
+                                <a href="laba1_5.html" onMouseOver="mOver(36)" onMouseOut="mOut(36)"><img
+                                        src=../Оболочка/images/03a_6.gif width=170 height=32 border=0
+                                        alt="Лабораторная работа 5" name="link36"></a><br>
+                                <a href="app.html" onMouseOver="mOver(37)" onMouseOut="mOut(37)"><img
+                                        src=../Оболочка/images/03a_7.gif width=170 height=20 border=0
+                                        alt="Приложение" name="link37"></a>
+                                <img src=../Оболочка/images/bg07.gif width=190 height=23><br></td>
+                    </tr>
+                    <tr>
+                        <td background=../Оболочка/images/bg03.gif valign=Top>
+                            <a href=part_2.html onMouseOver="mOver(4)" onMouseOut="mOut(4)"><img
+                                    src=../Оболочка/images/04a.gif width=190 height=29 border=0
+                                    alt="Практическая часть 2" name="link4"></a><br>
+                            <a href=../Заочное/index.html onMouseOver="mOver(5)" onMouseOut="mOut(5)"><img
+                                    src=../Оболочка/images/05a.gif width=190 height=29 border=0 alt="Заочное"
+                                    name="link5"></a><br>
+                            <a href=../Контроль_знаний/index.html onMouseOver="mOver(6)" onMouseOut="mOut(6)"><img
+                                    src=../Оболочка/images/06a.gif width=190 height=29 border=0 alt="Контроль знаний"
+                                    name="link6"></a><br>
+                            <img src=../Оболочка/images/bg08.gif width=190 height=13><br>
+
+                </table>
+            </td>
+            <td valign=top>
+                <br>
+
+                <table border=0 cellpadding=0 cellspacing=0 width=95%>
+                    <tr>
+                        <td>
+
+
+                            <table border=0 cellpadding=0 cellspacing=0>
+                                <tr>
+                                    <td bgcolor=#000000><img src=../Оболочка/images/raspor.gif height=2></td>
+                                <tr>
+                                    <td valign=center height="30"><span class=h1>Отладочная платформа Arduino</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor=#000000><img src=../Оболочка/images/raspor.gif height=2></td>
+                                </tr>
+                            </table>
+                            <br>
+
+
+                            <ul>
+                                <dt><a class=m href="#tit1">Отладочная платформа Arduino Mega 2560</a></dt>
+                                <ul>
+                                    <dt><a class=m href="#tit1_1">Общие сведения</a></dt>
+                                    <dt><a class=m href="#tit1_2">Краткие характеристики</a></dt>
+                                </ul>
+                                <dt><a class=m href="#tit2">Среда разработки AVRStudio</a></dt>
+                                <ul>
+                                    <dt><a class=m href="#tit2_1">Работа со средой разработки AVRStudio</a></dt>
+                                    <dt><a class=m href="#tit2_2">Интерфейс AVRStudio</a></dt>
+                                    <dt><a class=m href="#tit2_3">Создание нового проекта</a></dt>
+                                    <dt><a class=m href="#tit2_4">Построение и отладка проекта</a></dt>
+                                </ul>
+                                <dt><a class=m href="#tit3">Среда моделирования ISISProteus</a></dt>
+                                <ul>
+                                    <dt><a class=m href="#tit3_1">Работа со средой моделирования ISISProteus</a></dt>
+                                    <dt><a class=m href="#tit3_2">Загрузка программы в микроконтроллер</a></dt>
+                                </ul>
+                            </ul>
+                            </ul>
+
+
+                            <hr width="90%" Color="#7685C6" align="Right">
+                            <br><br>
+
+
+                            <a name="tit1"></a>
+                            <table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#aBB3D5>
+                                <tr>
+                                    <td bgcolor=#000000 colspan=2><img src=../Оболочка/images/raspor.gif height=1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width=30></td>
+                                    <td valign=center><span class=h>Отладочная платформа Arduino Mega 2560</span></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor=#000000 width="25" colspan="2"><img src=../Оболочка/images/raspor.gif
+                                                                                    height=1></td>
+                                </tr>
+                            </table>
+                            <br>
+
+
+                            <a name="tit1_1"></a>
+                            <p class=h3>1.1. Общие сведения</p>
+
+                            <p>Arduino Mega 2560 предназначена для практического овладения принципами построения
+                                микроЭВМ, обучения программированию в машинных кодах, а также
+                                для отладки программного обеспечения микроконтроллерных систем различного назначения.
+                                Платформа имеет 54 цифровых входов/выходов, 16 аналоговых
+                                входов, 4 последовательных порта UART, кварцевый генератор 16 МГц, разъёмы: USB,
+                                питания, ICSP и кнопка перезагрузки. Для работы необходимо
+                                подключить Arduino к компьютеру USB-кабелем или подать внешнее питание через
+                                соответствующий разъём.</p><br>
+
+
+                            <a name="tit1_2"></a>
+                            <p class=h3>1.2. Краткие характеристики</p>
+                            <br>
+
+                            <center>
+                                <table border=1 cellpadding="7" cellspacing="1" width=70%>
+                                    <tr bgcolor="#D1D6E9">
+                                        <td width=35%><p class=tcb>Характеристики</p></td>
+                                        <td width=16%><p class=tcb>Arduino UNO</p></td>
+                                        <td width="250"><a rel="group1" class="images"
+                                                           href="images/ArduinoUno_R3_Front.jpg"
+                                                           Title="Arduino UNO_R3_Front"><img
+                                                src="images/ArduinoUno_R3_Front.jpg" width=100></a></td>
+
+
+                                        <td width=16%><p class=tcb>Arduino Mega</p></td>
+                                        <td width="250"><a rel="group1" class="images"
+                                                           href="images/ArduinoMega2560_R3_Front.jpg"
+                                                           Title="ArduinoMega2560_R3_Front"><img
+                                                src="images/ArduinoMega2560_R3_Front.jpg" width=130></a></td>
+
+                                        <td width=16%><p class=tcb>Arduino NANO</p></td>
+                                        <td width="250"><a rel="group1" class="images" href="images/Arduino_nano.jpg"
+                                                           Title="Arduino Nano"><img src="images/Arduino_nano.jpg"
+                                                                                     width=110></a></td>
+
+                                    <tr bgcolor="#EaEaEa">
+                                        <td><p class=tl>Микроконтроллер</p></td>
+                                        <td colspan="2"><p class=tc><a href="pdf/ATmega328-328P.pdf">ATmega328p</a></p>
+                                        </td>
+                                        <td colspan="2"><p class=tc><a href="pdf/ATmega2560.pdf">ATmega2560</a></p></td>
+                                        <td colspan="2"><p class=tc><a href="pdf/ATmega328-328P.pdf">ATmega328p</a></p>
+                                        </td>
+                                    </tr>
+                                    <tr bgcolor=#DCDCDC>
+                                        <td><p class=tl>Тактовая частота</p></td>
+                                        <td colspan="6"><p class=tc>16 MHz</p></td>
+                                    </tr>
+                                    <tr bgcolor="#EaEaEa">
+                                        <td><p class=tl>Флеш-память программ</p></td>
+                                        <td colspan="2"><p class=tc>32 KB</p></td>
+                                        <td colspan="2"><p class=tc>256 KB</p></td>
+                                        <td colspan="2"><p class=tc>32 KB</p></td>
+                                    </tr>
+                                    <tr bgcolor=#DCDCDC>
+                                        <td><p class=tl>Оперативная память данных</p></td>
+                                        <td colspan="2"><p class=tc>2 KB</p></td>
+                                        <td colspan="2"><p class=tc>8 KB</p></td>
+                                        <td colspan="2"><p class=tc>2 KB</p></td>
+                                    </tr>
+
+                                    <tr bgcolor=#EaEaEa>
+                                        <td><p class=tl>Внешнее напряжение питания</p></td>
+                                        <td colspan="6"><p class=tc>7..12 V</p></td>
+                                    </tr>
+                                    <tr bgcolor=#DCDCDC>
+                                        <td><p class=tl>Дискретные входы/выходы</p></td>
+                                        <td colspan="2"><p class=tc>14</p></td>
+                                        <td colspan="2"><p class=tc>54</p></td>
+                                        <td colspan="2"><p class=tc>14</p></td>
+                                    </tr>
+
+                                    <tr bgcolor=#EaEaEa>
+                                        <td><p class=tl>Постоянный ток через вход/выход</p></td>
+                                        <td colspan="6"><p class=tc>40 mА</p></td>
+                                    </tr>
+                                    <tr bgcolor=#DCDCDC>
+                                        <td><p class=tl>Аналоговые входы</p></td>
+                                        <td colspan="2"><p class=tc>6</p></td>
+                                        <td colspan="2"><p class=tc>16</p></td>
+                                        <td colspan="2"><p class=tc>8</p></td>
+                                    </tr>
+                                    <tr bgcolor=#EaEaEa>
+                                        <td><p class=tl>Постоянный ток для вывода 3,3 В</p></td>
+                                        <td colspan="6"><p class=tc>50 mА</p></td>
+                                    </tr>
+
+
+                                    <tr bgcolor=#DCDCDC>
+                                        <td><p class=tl>Энергонезависимая память</p></td>
+                                        <td colspan="2"><p class=tc>1 KB</p></td>
+                                        <td colspan="2"><p class=tc>4 KB</p></td>
+                                        <td colspan="2"><p class=tc>1 KB</p></td>
+                                    </tr>
+                                    <td><p class=tl>Напряжение питания</p></td>
+                                    <td colspan="6"><p class=tc>5 В</p></td>
+                                    </tr>
+                                </table>
+                            </center>
+                            <br><br>
+
+                            <p>Программа, подготовленная к загрузке представляет собой *.hex-файл, сгенерированный в
+                                среде разработки AVRStudio из проекта на языке C или
+                                Assembler. Она загружается в Arduino через интерфейс USB непосредственно из командной
+                                строки. Простейшая программа на языке Assembler для
+                                микроконтроллера ATmega328p выглядит следующим образом:</p>
+
+                            <table width="470">
+                                <tr>
+                                    <td><pre><code>.include "m328pdef.inc"
+
+init:
+      ldi r16,0b00000001
+      out DDRB,r16
+main:
+      out PORTB, r16
+      rjmp main
+</code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p><code>.include</code> – это директива, которая подключает к проекту файл соответствий
+                                символических имён регистров их реальным адресам. Программа
+                                из подключенного файла будет выполняться так, как если бы код был написан в текущем
+                                файле. Доступ к регистрам ввода/вывода осуществляется по их
+                                адресам, являющимися операндами команды. Вместе с тем при написании ассемблерных
+                                программ гораздо удобнее обращаться к регистрам, используя вместо
+                                числовых значений адресов их стандартные, принятые в фирменной документации,
+                                символические имена. Такое решение облегчит перенос программного
+                                обеспечения с одного типа МК на другой.</p>
+
+                            <p>Эта программа, тем не менее, имеет структурированный вид благодаря двум основным блокам:
+                                инициализации, и блока решения задачи
+                                <code><span class="class1">(main)</span></code>.</p>
+
+                            <p>После компиляции команды преобразуются в коды, выполняемые вычислительным ядром
+                                контроллера, а также присваиваются адреса расположения команд в
+                                памяти программ. Полученный машинный код, сгенерированный компилятором можно увидеть в
+                                процессе пошаговой отладки программы во вкладке View
+                                &#8594; Disassembly. В результате откроется окно со следующим содержимым:</p>
+
+                            <left><img src=images/Debugger.png></left>
+
+                            <p>В каждой ячейке памяти программ хранится по два байта, так как каждая AVR-команда состоит
+                                из двух байт.</p>
+                            <br><br><br><br>
+
+
+                            <a name="tit2"></a>
+                            <table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#aBB3D5>
+                                <tr>
+                                    <td bgcolor=#000000 colspan=2><img src=../Оболочка/images/raspor.gif height=1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width=30></td>
+                                    <td valign=center><span class=h>Среда разработки AVRStudio</span></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor=#000000 width="25" colspan="2"><img src=../Оболочка/images/raspor.gif
+                                                                                    height=1></td>
+                                </tr>
+                            </table>
+                            <br>
+
+
+                            <a name="tit2_1"></a>
+                            <p class=h3>2.1. Работа со средой разработки AVRStudio</p>
+
+                            <p>Для написания программ, их отладки и трансляции используется среда “AVRStudio”. Она
+                                работает с проектами, аналогично тому, как это реализовано в
+                                Microsoft Visual Studio. Проект содержит файлы программы и ориентирован на применяемый
+                                микроконтроллер. Файл проекта *.aps содержит сведения о типе
+                                процессора, частоте тактового генератора и т.д. Он также содержит описание всех
+                                остальных файлов входящих в проект. Текст программы имеет расширение
+                                asm. Проект может содержать несколько файлов такого типа, в данном случае один из них
+                                будет главным, а другие должны подключаться в главном
+                                посредством директивы .include.</p>
+
+                            <p>Если программа не содержит критических ошибок и процесс трансляции прошел успешно, то в
+                                директории проекта автоматически появляется файл с
+                                результирующим кодом трансляции в hex-формате, готовым к загрузке в память программ МК,
+                                и другие вспомогательные файлы.</p><br>
+
+
+                            <a name="tit2_2"></a>
+                            <p class=h3>2.2. Интерфейс AVRStudio</p>
+
+                            <p>На рисунке представлен внешний вид AVRStudio.</p>
+
+                            <center><img src=images/AVRStudio.png alt="Рис. 1 AVRStudio.">
+                                <p class="c">Рис. 1. Отладочная среда AVRStudio.</p></center>
+
+                            <p>В левой части имеется древовидный навигатор файлов проекта. Правее него находится окно
+                                для редактирования файлов проекта. Ниже находится
+                                вспомогательное окно “Build”, в котором отображаются результаты трансляции, сообщения об
+                                ошибках и различные предупреждения (Warnings). В правом
+                                окне “I/OView” показаны ресурсы МК:</p>
+
+                            <ul>
+                                <li>Регистры общего назначения;
+                                <li>Порты ввода-вывода;
+                                <li>Таймеры;
+                                <li>Компараторы;
+                                <li>АЦП и т.д.
+                            </ul>
+                            <br><br>
+
+
+                            <a name="tit2_3"></a>
+                            <p class=h3>2.3. Создание нового проекта</p>
+
+                            <p>В меню Project &#8594; NewProject. В поле Projecttype необходимо выбирать тип будущего
+                                проекта atmel AVR assembler. В Projectname вводим имя
+                                проекта латинскими символами. Под полем находятся два checkbox'а. Create initialize file
+                                определяет, нужно ли автоматически создавать
+                                главный программный файл. Если такой файл уже есть, то снять галочку, а в созданном
+                                проекте просто подключить готовый программный файл.
+                                Create folder определяет, нужно ли автоматически создавать отдельный каталог для данного
+                                проекта.</p>
+
+                            <p>Ниже присутствует поле, содержащее имя файла. Без необходимости его лучше оставлять со
+                                значением по умолчанию. Последним элементом данного окна
+                                является Location, позволяющее указать путь к месту на жёстком диске, где будут
+                                храниться файлы проекта.</p>
+
+                            <center><img src="images/AVRStudio2.png" alt="Рис. 2. Создание нового проекта">
+                                <p class="c">Рис. 2. Создание нового проекта</p></center>
+
+                            <p>По кнопке Next, откроется следующее окно: Select debug device and platform (Выбор
+                                отладочной платы и микроконтроллера). В списке отладочных
+                                платформ необходимо выбрать AVRSimulator, а в списке устройств – ATmega328p. Теперь по
+                                нажатию Finish будет создан проект в указанном каталоге.</p>
+
+                            <center><img src="images/AVRStudio3.png"
+                                         alt="Рис. 3. Выбор отладочной платформы и микроконтроллера">
+                                <p class="c">Рис. 3. Выбор отладочной платформы и микроконтроллера</p></center>
+                            <br><br><br>
+
+
+                            <a name="tit2_4"></a>
+                            <p class=h3>2.4. Построение и отладка проекта</p>
+
+                            <p>В открывшемся проекте необходимо подключить файл, содержащий в себе определения имен для
+                                адресов регистров. В нашем случае первой строкой
+                                программы будет: .include "m328pdef.inc". После написания кода в созданном проекте, его
+                                необходимо транслировать. Эта операция выполнятся через меню
+                                по вкладке Build, а в ней соответственно опции «Build» или «Build and Run» или нажать
+                                соответствующие им комбинации горячих клавиш: F7 и Ctrl+F7.
+                                Если в проекте отсутствуют синтаксические ошибки, то в окне построения Build появится
+                                сообщение:</p>
+
+                            <center><img src="images/AVRStudio4.png" alt="Рис. 4. Трансляция проекта">
+                                <p class="c">Рис. 4. Трансляция проекта</p></center>
+
+                            <p>Проект также будет успешно транслирован, если в результате построения будут найдены
+                                предупреждения (warnings). Однако в случае нахождения
+                                серьёзных ошибок AVRStudio сообщит об этом в отчёте построения и прервёт компиляцию:</p>
+
+                            <center><img src="images/AVRStudio5.png" alt="Рис. 5. Отчёт о результатах компиляции">
+                                <p class="c">Рис. 5. Отчёт о результатах компиляции</p></center>
+
+                            <p>В данном случае была обнаружена одна ошибка и ноль предупреждений. Информация о
+                                месторасположении ошибки и её типе находится выше (в строке
+                                отмеченной красной точкой). Если навести курсор на эту строку и дважды щелкнуть левой
+                                кнопкой мыши (или нажать F4), то в тексте программы отметится
+                                соответствующая строка.</p>
+
+                            <p>В нахождении ошибок может помочь пошаговая отладка программы и наблюдение за изменением
+                                содержимого регистров и ячеек памяти. Для этого
+                                необходимо запустить программу в AVRStudio через вкладку Debug, где выбрать опцию Start
+                                Debugging (Ctrl+Shift+alt+F5) либо запустить построение
+                                проекта с последующим запуском – Build &#8594; Build and Run (Ctrl+F7):</p>
+
+                            <center><img src="images/AVRStudio6.png" alt="Рис. 6. Отладка программы">
+                                <p class="c">Рис. 6. Отладка программы</p></center>
+
+                            <p>В рабочей области программы появилась новая форма Processor, а в редакторе кода жёлтая
+                                стрелка, показывающая на строку кода, которой соответствует
+                                состояние программного счётчика (PC) на данной итерации.</p>
+
+                            <p>В окне Processor можно наблюдать за содержимым:</p>
+
+                            <ul>
+                                <li>PC;</li>
+                                <li>Stack Pointer (указатель стека);</li>
+                                <li>X, Y, Z (указатели на начало областей памяти предназначенных для сдвоенных регистров
+                                    R26-R27, R28-R29, R30-R31);
+                                </li>
+                                <li>Cycle Counter (счётчик тактов процессора);</li>
+                                <li>Frequency (тактовая частота процессора);</li>
+                                <li>Stop Watch (таймер отсчитывающий время с начала выполнения программы для заданной
+                                    частоты);
+                                </li>
+                                <li>SREG (регистр состояния);</li>
+                                <li>Registers (РОН).</li>
+                            </ul>
+
+                            <p>Комбинацией клавиш alt+4 (либо во вкладке View &#8594; Memory) можно открыть окно:</p>
+
+                            <center><img src="images/AVRStudio7.png" alt="Рис. 7. Memory">
+                                <p class="c">Рис. 7. Memory</p></center>
+
+                            <p>В выпадающем списке можно выбирать просмотр различных областей памяти от ОЗУ до регистров
+                                I/O. Правой кнопкой мыши вызывается контекстное меню
+                                позволяющее изменять систему счисления, в которой отображаются данные, двухбайтное или
+                                однобайтное представление и некоторые другие опции.</p>
+
+                            <p>Переход к следующей команде осуществляется нажатием кнопки Step Over во вкладке Debug
+                                либо горячей клавишей F10. Иногда бывают ситуации, в которых
+                                необходимо, чтобы от начала программы прошло достаточно времени, например прерывание по
+                                переполнению счётчика-таймера. В этом случае можно
+                                воспользоваться автошагом (т.е. автоматическим переходом по строкам программы), для
+                                этого необходимо во вкладке Debug включить auto Step (alt+F5).
+                                Чтобы программа в режиме auto Step автоматически остановилась на паузу, необходимо
+                                поставить breakpoint (точку прерывания), которая представляет
+                                собой красную точку перед строкой с командой и устанавливается из вкладки Debug или с
+                                помощью горячей клавиши F9.</p><br><br><br><br>
+
+
+                            <a name="tit3"></a>
+                            <table border=0 cellpadding=0 cellspacing=0 width=97% bgcolor=#aBB3D5>
+                                <tr>
+                                    <td bgcolor=#000000 colspan=2><img src=../Оболочка/images/raspor.gif height=1>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width=30></td>
+                                    <td valign=center><span class=h>Среда моделирования ISISProteus</span></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor=#000000 width="25" colspan="2"><img src=../Оболочка/images/raspor.gif
+                                                                                    height=1></td>
+                                </tr>
+                            </table>
+                            <br>
+
+
+                            <a name="tit3_1"></a>
+                            <p class=h3>3.1. Работа со средой моделирования ISISProteus</p>
+
+                            <p>ISIS Proteus представляет собой среду, позволяющую моделировать работу электронных
+                                схем.</p>
+
+                            <p>При запуске программы, будет предложено создать новый проект с помощью мастера. После
+                                этого появится рабочая область Proteus, на которой можно
+                                размещать компоненты. Готовые модели сохраняются в файлах с расширением pdsprj.</p>
+
+                            <center><img src="images/ISISProteus.gif" alt="Рис. 8. Создание нового проекта ISISProteus">
+                                <p class="c">Рис. 8. Создание нового проекта ISISProteus</p><br>
+
+                                <img src="images/ISISProteus.png" alt="Рис. 9. Рабочая область ISISProteus">
+                                <p class="c">Рис. 9. Рабочая область ISISProteus</p>
+                            </center>
+
+                            <p>Для добавления нового компонента в рабочую область в меню необходимо выбрать library,
+                                затем вкладку PickDevice/Symbol. Кроме того, можно
+                                воспользоваться горячей клавишей P, либо нажать на соответствующий символ в левой части
+                                экрана, который расположен на форме Device Selector
+                                (Port Selector или Terminal Selector).</p>
+
+                            <center><img src="images/ISISProteus1.png" alt="Рис. 10. Добавление нового компонента">
+                                <p class="c">Рис. 10. Добавление нового компонента</p></center>
+
+                            <p>В результате будет открыто окно Pick Devices, в котором можно выбрать желаемый
+                                микроконтроллер либо любой другой электронный компонент:</p>
+
+                            <center><img src="images/ISISProteus2.png" alt="Рис. 11. Окно Pick Devices">
+                                <p class="c">Рис. 11. Окно Pick Devices с областями Schematic preview и PCB preview</p>
+                            </center>
+
+                            <p>Выбор конкретного устройства сопровождается выводом графической информации в окнах
+                                Schematic preview и PCB preview. По кнопке ОК, необходимо
+                                указать точку расположения элемента. Подобным образом на рабочую область можно добавить
+                                любые элементы. По кнопке ОК, необходимо указать точку
+                                расположения элемента. Подобным образом на рабочую область можно добавить любые
+                                элементы.</p>
+
+                            <center><img src="images/ISISProteus3.png" alt="Рис. 12. Окна Schematic preview и PCB preview">
+                                <p class="c">Рис. 12. Пример расположения элементов</p></center>
+
+                            <p>Также для работоспособности схемы, может понадобиться добавить несколько специальных
+                                компонентов: такие как элемент питания (POWER) и земля
+                                (GROUND). Эти элементы можно выбрать в окне Terminal Selector нажав в левом углу экрана
+                                кнопку Terminal Mode:</p>
+
+                            <center><img src="images/ISISProteus4.png" alt="Рис. 14. Расположение кнопки Terminal Mode">
+                                <p class="c">Рис. 13. Расположение кнопки Terminal Mode</p></center>
+
+                            <p>Перейти обратно на вкладку Devices можно по кнопке Component Mode, расположенной на 5
+                                кнопок выше Terminal Mode, либо горячей клавишей P.
+                                Соединения между элементами осуществляется следующим образом:</p>
+
+                            <ul>
+                                <li>В качестве текущего режима должен быть выбран Selection Mode (первый элемент на
+                                    левой панели).
+                                </li>
+                                <li>При наведении на возможную линию связи курсор примет вид карандаша.</li>
+                                <li>Одним нажатием манипулятора (левая клавиша мыши) установить начало линии и отпустить
+                                    клавишу.
+                                </li>
+                                <li>Перевести курсор на конечную точку (элемент с которым необходимо провести
+                                    соединение) и повторить действие предыдущего пункта.
+                                </li>
+                            </ul>
+
+                            <p>Редактирование уже расположенных компонентов (в той мере, в которой это возможно)
+                                осуществляется из контекстного меню по правой кнопке мыши при
+                                выбранном элементе.</p>
+
+                            <p>На следующем этапе необходимо загрузить в микроконтроллер сгенерированный hex файл, что
+                                является эквивалентом «прошивания» реального
+                                микроконтроллера. Это делается в свойствах МК (двойной щелчок левой кнопкой мыши или
+                                вызов контекстного меню правой кнопкой, с последующим выбором
+                                вкладки Edit Properties):</p>
+
+                            <center><img src="images/ISISProteus5.png"
+                                         alt="Рис. 14. Окно редактирования свойств Edit Properties">
+                                <p class="c">Рис. 14. Окно редактирования свойств Edit Properties</p></center>
+
+                            <p>Значения большинства компонентов лучше оставить по умолчанию. После нажатия на кнопку в
+                                виде папки в поле Program File, необходимо указать путь к hex
+                                файлу. Дальнейшее усложнение схемы будет происходить в зависимости от задач, которые
+                                необходимо реализовать. Простейшим примером будет подключение
+                                светодиода к любому из выводов микроконтроллера, соответствующего произвольному порту
+                                ввода-вывода, что даст индикацию значения соответствующего бита
+                                находящегося в регистре PORTx, при условии того, что заданная линия текущего порта
+                                находится в режиме вывода (OUT).</p>
+
+                            <p>Для запуска, пошагового моделирования, паузы и остановки симуляции используются 4 кнопки
+                                расположенные в левой нижней части экрана:</p>
+
+                            <center><img src="images/ISISProteus6.png"
+                                         alt="Рис. 15. Кнопки для запуска, пошагового моделирования, паузы и остановки симуляции">
+                                <p class="c">Рис. 15. Кнопки для запуска, пошагового моделирования, паузы и остановки
+                                    симуляции</p></center>
+
+                            <p>При нажатии кнопки Play будет произведена симуляция. Если в ходе симуляции были
+                                обнаружены ошибки, в журнале симуляции будут соответствующие
+                                сообщения, в противном случае, появится сообщение об успешной симуляции:</p>
+
+                            <center><img src="images/ISISProteus7.png" alt="Рис. 16. Сообщение о симуляции">
+                                <p class="c">Рис. 16. Сообщение о симуляции</p></center>
+
+                            <p>В качестве примера воспользуемся вышеприведённым ниже кодом, который заставляет светиться
+                                светодиод, подключенный к 8 выводу Arduino UNO через
+                                резистор на землю. Этот вывод соответствует нулевому биту регистра ввода/вывода PORTB
+                                (PB0) микроконтроллера ATmega328p. Поэтому при выдаче на эту
+                                линию порта логической единицы будет включен светодиод.</p>
+
+                            <table width="470">
+                                <tr>
+                                    <td><pre><code>.include "m328pdef.inc"
+
+init:
+      ldi r16,0b00000001
+      out DDRB,r16
+main:
+      out PORTB, r16
+      rjmp main
+</code></pre>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p>Компиляция этого кода приведёт к созданию hex-файла, который необходимо загрузить в
+                                виртуальный микроконтроллер системы Proteus.</p>
+
+                            <center><img src="images/ISISProteus8.png" alt="Рис. 17. Модель собранной схемы">
+                                <p class="c">Рис. 17. Модель собранной схемы</p></center>
+
+                            <p>При запуске симуляции можно наблюдать включение светодиода. Убедившись в
+                                работоспособности программы в симуляторе её можно загружать в реальный
+                                контроллер.</p><br>
+
+
+                            <a name="tit3_2"></a>
+                            <p class=h3>3.2. Загрузка программы в микроконтроллер</p>
+
+                            <p>Hex-файл программы записывается в память МК через USART на плате Arduino. Соединение и
+                                запись со стороны ПК организованно с помощью консольной
+                                программы AVRdude (AVR Downloader-Uploader). Её необходимо вызывать через консоль
+                                Windows (cmd) c передачей параметров, описывающих тип МК, скорость
+                                передачи, номер COM-порта на ПК и т.д. Для использования программы необходимо поместить
+                                в одном каталоге исполняемый файл AVRdude.exe и файл
+                                конфигурации AVRdude.conf (можно расположить в разных директориях, что придётся учесть в
+                                указании расположения файлов). Затем запустить из командной
+                                строки AVRdude.exe с требуемыми параметрами:</p>
+
+                            <p><font color="blue">«Путь к файлу»</font>AVRdude -C<font color="blue">«Путь к
+                                файлу»</font>AVRdude.conf -v -v -v -v
+                                -pATmega2560 -cwiring -P\\.\COM<font color="blue">«Номер порта»</font> -b115200 -D
+                                -Uflash:w:<font color="blue">«Путь к файлу»</font>\<font color="blue">«Имя файла»</font>.hex:i
+                            </p>
+
+                            <p>Параметры передаваемые AVRdude:</p>
+
+                            <ul>
+                                <li>-C – размещение файла конфигурации;</li>
+                                <li>-v – так называемый «многословный» (verbose) вывод – полезно для контроля и
+                                    отладки;
+                                </li>
+                                <li>-p – тип микроконтроллера для программирования;</li>
+                                <li>-P – коммуникационный порт, к которому подключён Arduino (в Windows его можно
+                                    посмотреть в диспетчере устройств);
+                                </li>
+                                <li>-b – скорость работы с последовательного порта;</li>
+                                <li>-D – отключение очистки МК перед прошивкой;</li>
+                                <li>-U :r|w|v:[:format]: выполнение прошивки, тип памяти МК – flash или EEPROM;</li>
+                                <li>r|w|v – флаги определяют необходимое действие:</li>
+                                <ul>
+                                    r (read – считать);<br>
+                                    w (write – записать);<br>
+                                    v (verify – проверить);
+                                </ul>
+                                <li>[:format] флаг формата данных (используем «Intel Hex»).</li>
+                            </ul>
+
+                            <p>Пример для Arduino 2560: <br> С:\AVRdude –CC:\ AVRdude.conf -v -v -v -v -pATmega2560
+                                -cwiring -P\\.\COM4 -b115200 -D -Uflash:w:C:\led.hex:i</p>
+
+                            <p>Пример для Arduino UNO: <br> C:\AVRdude -CC:\AVRdude.conf -v -v -v -v -pATmega328p
+                                -cArduino -P\\.\COM3 -b115200 -D -Uflash:w:C:\led.hex:i</p>
+
+                            <p>Если Arduino подключён к ПК и в параметрах не было допущено ошибок, то hex файл
+                                загрузится в МК.</p>
+
+
+<hr width="90%" Color="#7685C6" Align="Right"><br>
+
+                                </td></tr></table>
+                            </center>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ColSpan=2>
+
+<table border=0 cellspacing=0 cellpadding=0>
+  <tr>
+    <td background=../Оболочка/images/bg1.gif width=458 height=100 valign=Bottom>
+      <p class=co>Copyright &copy; БГУИР, Кафедра Систем управления, 2023<br><img src=../Оболочка/images/raspor.gif width=1 height=8></p></td>
+    <td background=../Оболочка/images/bg2.gif width=159 height=100>
+      <a href=#Top onMouseOver="mOver(7)" onMouseOut="mOut(7)"><img src=../Оболочка/images/07a.gif width=159 height=46 border=0 alt="К началу документа" name="link7"></a><br>
+      <a href=../index.html onMouseOver="mOver(8)" onMouseOut="mOut(8)"><img src=../Оболочка/images/08a.gif width=159 height=54 border=0 alt="К первой странице" name="link8"></a></td>
+  </tr>
+</table>
+
+                        </td>
+                    </tr>
+                </table>
+</div>
+</body>
+</html>

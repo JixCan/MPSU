@@ -1,0 +1,241 @@
+<HTML>
+
+<Head>
+<Meta http-equiv="Content-Type" content="text/html; charset=windows1251">
+<Title>Test AutoLisp 3</Title>
+<Link Rel="stylesheet" Type="text/css" Href="../../оболочка/css/acad.css">
+
+<Script Language="JavaScript"><!--
+	function mOver(num) {
+		if (document.images) {
+			document.images['link'+num].src=eval('active'+num+'.src');
+		}
+	}
+	function mOut(num) {
+		if (document.images) {
+			document.images['link'+num].src=eval('normal'+num+'.src');
+		}
+	}
+//-->
+function viewResult(f) {
+numberofquestions=10
+correct=0
+for (i=0; i<numberofquestions; i++){
+if (document.all("test"+i.toString())['correct'].checked){correct++}}
+
+document.write("Правильных ответов: " + correct.toString()+" из " + numberofquestions.toString()+" возможных "+"<br>")
+document.write("<a href=test_autolisp_3.html url=test_autolisp_3.html>Пройти вновь</a>")
+}
+</Script>
+
+</Head>
+
+<Body Bgcolor=#E6E6E6 TopMargin=1 LeftMargin=1 MarginWidth=0 MarginHeight=0 style="max-width: 1300px;">
+<Script Language="JavaScript"><!--
+if (document.images) {
+	normal1=new Image(190,29);normal1.src="../../оболочка/images/01a.gif";
+	active1=new Image(190,29);active1.src="../../оболочка/images/01p.gif";
+	normal2=new Image(190,29);normal2.src="../../оболочка/images/02a.gif";
+	active2=new Image(190,29);active2.src="../../оболочка/images/02p.gif";
+	normal3=new Image(190,29);normal3.src="../../оболочка/images/03a.gif";
+	active3=new Image(190,29);active3.src="../../оболочка/images/03p.gif";
+	normal7=new Image(190,29);normal7.src="../../оболочка/images/7a.gif";
+	active7=new Image(190,29);active7.src="../../оболочка/images/7p.gif";
+	normal8=new Image(190,29);normal8.src="../../оболочка/images/08a.gif";
+	active8=new Image(190,29);active8.src="../../оболочка/images/08p.gif";
+	normal14=new Image(159,46);normal14.src="../../оболочка/images/09a.gif";
+	active14=new Image(159,46);active14.src="../../оболочка/images/09p.gif";
+	normal15=new Image(159,54);normal15.src="../../оболочка/images/10a.gif";
+	active15=new Image(159,54);active15.src="../../оболочка/images/10p.gif";
+	normal19=new Image(190,91);normal19.src="../../оболочка/images/bg01.gif";
+	
+	normal24=new Image(170,19);normal24.src="../../оболочка/images/04a.gif";
+	active24=new Image(170,19);active24.src="../../оболочка/images/04p.gif";
+	normal26=new Image(170,19);normal26.src="../../оболочка/images/06a.gif";
+	active26=new Image(170,19);active26.src="../../оболочка/images/06p.gif";
+	normal10=new Image(170,25);normal10.src="../../оболочка/images/05_1a.gif";
+	active10=new Image(170,25);active10.src="../../оболочка/images/05_1p.gif";
+	normal12=new Image(170,19);normal12.src="../../оболочка/images/05_3a.gif";
+	active12=new Image(170,19);active12.src="../../оболочка/images/05_3p.gif";
+	normal13=new Image(170,19);normal13.src="../../оболочка/images/8a.gif";
+	active13=new Image(170,19);active13.src="../../оболочка/images/8p.gif";
+}
+//-->
+</Script>
+
+<Left>
+<A Name="Top"></A>
+<Table Border=0 Width=100% CellSpacing=0 CellPadding=0>
+<Tr>
+ <Td BackGround=../../оболочка/images/bg01.gif Width=190 Height=91 name="link19">&nbsp;</Td>
+ <Td Rowspan=2 BackGround=../../оболочка/images/bg02_mech.gif Width=100% Height=120 Valign=Bottom>
+
+<Table BackGround=../../оболочка/images/raspor.gif Border=0 CellSpacing=0 CellPadding=0>
+ <Tr>
+  <Td Width=200></Td>
+  <Td><P Class=h6>Тест по AutoLisp<Br><Img Src=../../оболочка/images/raspor.gif Width=1 Height=43></P></Td>
+ </Tr>
+</Table>
+
+</Td></Tr>
+<Tr>
+ <Td BackGround=../../оболочка/images/bg03.gif>
+	<A Href=../../Программа/!rabprog.html onMouseOver="mOver(26)" onMouseOut="mOut(26)"><Img Src=../../оболочка/images/06a.gif Width=190 Height=29 Border=0 
+Alt="rabprog" name="link26"></A><Br></Td>
+</Tr>
+<Tr>
+ <Td BackGround=../../оболочка/images/bg09.gif Valign=Top>
+
+<Table Border=0 CellSpacing=0 CellPadding=0>
+<Tr><Td BackGround=../../оболочка/images/bg03.gif Valign=Top>
+<A Href=../../Теория/!lekcii.html onMouseOver="mOver(7)" onMouseOut="mOut(7)"><Img Src=../../оболочка/images/7a.gif Width=190 Height=29 Border=0 
+Alt="lekcii" name="link7"></A><Br>
+<Tr><Td BackGround=../../оболочка/images/bg03.gif Valign=Top>
+	 <A Href=../../Практика/!zadanie.html onMouseOver="mOver(13)" onMouseOut="mOut(13)"><Img Src=../../оболочка/images/8a.gif Width=190 Height=29 Border=0 
+Alt="laboratornue" name="link13"></A><Br>
+ </Td>
+
+<Tr><Td BackGround=../../оболочка/images/bg04.gif Valign=Top>
+
+  <A Href=../!samocontrol.html onMouseOver="mOver(17)" onMouseOut="mOut(17)"><Img Src=../../оболочка/images/05p.gif Width=190 Height=29 Border=0 Alt="Test" name="link17"></A><Br>
+<Tr><Td BackGround=../../оболочка/images/bg05.gif Width=190 Valign=Top>
+  <A Href="../!samocontrol.html#1" onMouseOver="mOver(10)" onMouseOut="mOut(10)"><Img Src=../../оболочка/images/05_1a.gif Width=170 Height=25 Border=0 Alt="AutoCAD" name="link10"></A><Br></Td></Tr>
+<Tr><Td BackGround=../../оболочка/images/bg06.gif Width=190 Height=36 Valign=Top>
+  <A Href="../!samocontrol.html#2" onMouseOver="mOver(11)" onMouseOut="mOut(11)"><Img Src=../../оболочка/images/05_2p.gif Width=170 Height=19 Border=0 Alt="AutoLisp" name="link11"></A><Br>
+  <A Href="../!samocontrol.html#3" onMouseOver="mOver(12)" onMouseOut="mOut(12)"><Img Src=../../оболочка/images/05_3a.gif Width=170 Height=19 Border=0 Alt="Mechanical Desktop" name="link12"></A><Br>
+  <Img Src=../../оболочка/images/bg07.gif Width=190 Height=23><Br></Td></Tr>
+<Tr><Td BackGround=../../оболочка/images/bg03.gif Valign=Top>
+    <!--<A Href=!rabprog.html onMouseOver="mOver(26)" onMouseOut="mOut(26)"><Img Src=../../оболочка/images/06a.gif Width=190 Height=29 Border=0 Alt="rabprog" name="link26"></A><Br> -->
+  <Img Src=../../оболочка/images/bg08.gif Width=190 Height=13><Br>
+</Td>
+</Table></Td>
+ <Td Valign=Top>
+<P><Br></P>
+
+<Table Border=0 Width=100% CellSpacing=0 CellPadding=0>
+<Tr>
+ <Td>
+
+<form>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>1.Каково назначение функции DEFUN?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test0 type=radio id=correct> Объявляет и размещает в памяти пользовательскую функцию<br>
+<input name=test0 type=radio> Выполняет пользовательскую функцию<br>
+<input name=test0 type=radio> Размещает в памяти пользовательскую функцию и выполняет ее<br>
+<input name=test0 type=radio> Ни один из перечисленных вариантов не верен</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>2.Сколько аргументов можно передать пользовательской функции при ее вызове?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test1 type=radio> Сколько угодно<br>
+<input name=test1 type=radio> Ни одного<br>
+<input name=test1 type=radio id=correct> Столько, сколько было задано при ее объявлении</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>3.Какое значение вернет функция ( DEFUN abc ( / x ) ( SETQ x 9 ) ( SQRT x ) ) ?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test2 type=radio> X<br>
+<input name=test2 type=radio id=correct> 3<br>
+<input name=test2 type=radio> 9<br>
+<input name=test2 type=radio> nil</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>4.Чему будет равна переменная p после выполнения следующего кода: ( SETQ p 10 ) ( DEFUN abc ( / p1 ) ( SETQ p p1 ) ) ( abc )</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test3 type=radio> 10<br>
+<input name=test3 type=radio> 'p1<br>
+<input name=test3 type=radio id=correct> nil</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>5.Дана функция ( DEFUN abc ( / x y ) ( SETQ y ( + x 5 ) ) ). Какое значение она вернет?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test4 type=radio> nil<br>
+<input name=test4 type=radio> 0<br>
+<input name=test4 type=radio> 5<br>
+<input name=test4 type=radio id=correct> Возникнет ошибка</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>6.Функция DEFUN выглядит как ( DEFUN abc ( d e / f g ) ... Что такое d, e и f, g?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test5 type=radio> d,e - локальные переменные, f,g - глобальные переменные<br>
+<input name=test5 type=radio id=correct> d,e - аргументы функции, f,g - локальные переменные<br>
+<input name=test5 type=radio> d,e - глобальные переменные, f,g - локальные переменные<br>
+<input name=test5 type=radio> d,e - локальные переменные, f,g - аргументы функции</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>7.Что неправильно в функции ( LOAD "test.lsp" )?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test6 type=radio id=correct> Не нужно ставить расширение .lsp<br>
+<input name=test6 type=radio> Не нужны кавычки<br>
+<input name=test6 type=radio> Не нужен пробел после скобки<br>
+<input name=test6 type=radio> Все правильно</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>8.Что будет, если имя пользовательской функции начать с С:?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test7 type=radio> Ничего<br>
+<input name=test7 type=radio id=correct> В Автокаде появится новая команда<br>
+<input name=test7 type=radio> В эту функцию можно будет передавать произвольное число аргументов<br>
+<input name=test7 type=radio> Из этой функции можно будет вызывать команды Автокада</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>9.Зачем в функции ( PROMPT "\nHello!!!" ) стоят символы "\n"?</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test8 type=radio> Они тут не нужны<br>
+<input name=test8 type=radio> Это ввод симола с указанным шестнадцатиричным кодом<br>
+<input name=test8 type=radio> Это код управления экранным драйвером ANSI.SYS<br>
+<input name=test8 type=radio id=correct> Это управляющий код перехода на новую строку</P><br>
+
+<Table Border=0 CellPadding=0 CellSpacing=0 Width=95% BgColor=#9CA6CE>
+<Tr><Td Bgcolor=#000000 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr>
+<Tr><Td Width=30><Img Src=../../оболочка/images/raspor.gif></Td><Td Valign=Center><P Class=h>10.Дана функция ( DEFUN abc ( / x ) ( SETQ y 10 ) ). Назовите область видимости переменной y</P></Td></Tr>
+<Tr><Td Bgcolor=#000000 Width=25 ColSpan=2><Img Src=../../оболочка/images/raspor.gif Height=1></Td></Tr></Table>
+<P><input name=test9 type=radio> Локальная<br>
+<input name=test9 type=radio id=correct> Глобальная<br>
+<input name=test9 type=radio> Ни одно из вышеназванных</P><br>
+
+<center>
+<input type=button value="Проверить" onClick="viewResult(this.form)">
+</center>
+</form>
+
+</Td></Tr></Table>
+
+<Hr Width="90%" Color="#7685C6" Align="Right">
+<Br>
+
+ </Td>
+</Tr>
+<Tr>
+ <Td ColSpan=2>
+
+<Table Border=0 CellSpacing=0 CellPadding=0>
+ <Tr>
+  <Td BackGround=../../оболочка/images/b1.gif Width=458 Height=100 Valign=Bottom>
+   <P Class=co>Copyright &copy; БГУИР, Кафедра Систем управления, 2010<Br>
+   <Img Src=../../оболочка/images/raspor.gif Width=1 Height=8></P></Td>
+  <Td BackGround=../../оболочка/images/b2.gif Width=159 Height=100>
+   <A Href=#Top onMouseOver="mOver(14)" onMouseOut="mOut(14)">
+<Img Src=../../оболочка/images/09a.gif Width=159 Height=46 Border=0 Alt="К началу документа" name="link14"></A><Br>
+   <A Href=../../Практика/content/lb1/!acad.html onMouseOver="mOver(15)" onMouseOut="mOut(15)">
+<Img Src=../../оболочка/images/10a.gif Width=159 Height=54 Border=0 Alt="К первой странице" name="link15"></A></Td>
+ </Tr>
+</Table>
+
+ </Td>
+</Tr>
+</Table>
+
+</Body>
+</HTML>
